@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        background-color: #050505;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d0d0d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D7193F;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#050505",
+            "surface-container-low": "#0e0e0e",
+            "surface-container": "#131313",
+            "surface-container-high": "#1c1c1c",
+            "surface-container-highest": "#282828",
+            "surface": "#050505",
+            "on-surface": "#F4F4F2",
+            "secondary": "#a1a1aa",
+            "outline": "#404040",
+            "outline-variant": "#262626",
+            "primary": "#ffb3b4",
+            "primary-container": "#D7193F",
+            "on-primary-container": "#FFFFFF",
+            "inverse-primary": "#b01231"
+          },
+          fontFamily: {
+            "display-hero": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "label-mono": ["Space Grotesk", "monospace"],
+            "label-ui": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white">
+<!-- ==================== HEADER NAVIGATION ==================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-outline-variant">
+<div class="h-20 max-w-[1400px] mx-auto px-4 md:px-8 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-9 h-9 rounded-full overflow-hidden border border-outline bg-[#000000] flex items-center justify-center p-0.5 shadow-sm group-hover:border-primary-container transition-colors">
+<img alt="AEVUM STACK Clock" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRGfUt4EcyCaTs25EvVjuUv3Ebl7HkovGbseT9x22UnYgytreWx9R6ML1h3ZhhkEpMjq6ZkH8vi5jnu-zXqaJHD-2EcXemSjbeBWX0Zh35UIAvzze_iyeAgyrqF2aHLZavyo9ffK9Kyah_FMTSfB_uiESxbD0F3uGT6fPVcJ9Y2m6RO1jL90ssllMj5tKFYtCrWHN1pxrOLWCRh0s_wHAXvNs_m-RPm3ysZqkYNd301xVK0YFk4kNv"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-base md:text-lg font-bold tracking-wider text-on-surface group-hover:text-primary-container transition-colors uppercase">AEVUM STACK</span>
+<span class="font-label-mono text-[10px] text-secondary tracking-widest leading-none">aevumstack.dev</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden xl:flex items-center gap-1 text-sm font-label-ui">
+<a class="px-3.5 py-2 text-on-surface hover:text-white hover:bg-surface-container-high rounded transition-colors" href="#">Home</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#services">Services</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#packages">Packages</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#support-plans">Support Plans</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#how-it-works">How It Works</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#faq">FAQ</a>
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Nav CTA -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded hover:bg-inverse-primary transition-all active:scale-[0.98] border border-primary-container" href="#contact">
+<span>Start a Project</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+<a class="xl:hidden p-2 text-secondary hover:text-white" href="#packages" title="View Packages">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="w-full pt-20">
+<!-- ==================== SECTION 1: HERO ==================== -->
+<section class="relative w-full px-4 md:px-8 pt-16 md:pt-24 pb-16 border-b border-outline-variant overflow-hidden">
+<!-- Subtle Crimson Accent Glow -->
+<div class="absolute top-10 right-1/4 w-[420px] h-[420px] bg-primary-container/10 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="max-w-[1400px] mx-auto">
+<!-- Telemetry Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded bg-surface-container-low border border-outline-variant text-[11px] font-label-mono text-secondary uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>DIGITAL GROWTH SYSTEMS &amp; WEB ENGINEERING</span>
+<span class="text-outline">|</span>
+<span class="text-primary-container font-semibold">aevumstack.dev</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Hero Text -->
+<div class="lg:col-span-8 flex flex-col justify-center">
+<h1 class="font-display-hero text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-on-surface uppercase mb-6 leading-[1.08]">
+              Your business deserves <span class="text-white">more than just a website.</span><br/>
+<span class="text-primary-container">It deserves to grow.</span>
+</h1>
+<p class="font-body-lg text-lg sm:text-xl text-secondary max-w-2xl mb-8 leading-relaxed">
+              We build professional websites and digital growth systems that help businesses get discovered, earn trust and generate more customer enquiries.
+            </p>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<a class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-container text-white font-label-ui text-sm font-semibold uppercase tracking-wider rounded hover:bg-inverse-primary hover:shadow-lg hover:shadow-primary-container/20 transition-all active:scale-[0.98]" href="#packages">
+<span>Explore Packages</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 bg-surface-container text-on-surface border border-outline font-label-ui text-sm uppercase tracking-wider rounded hover:bg-surface-container-high hover:border-secondary transition-all" href="#contact">
+<span>Talk to Us</span>
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</a>
+</div>
+</div>
+<!-- Official Clock Logo Display -->
+<div class="lg:col-span-4 flex justify-center lg:justify-end">
+<div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-[#000000] border border-outline-variant p-6 flex items-center justify-center shadow-2xl group">
+<!-- Geometric Dial Rings -->
+<div class="absolute inset-2 rounded-full border border-dashed border-outline-variant/60 pointer-events-none"></div>
+<div class="absolute inset-6 rounded-full border border-outline-variant/30 pointer-events-none"></div>
+<!-- Ticks at Cardinal Positions -->
+<span class="absolute top-3 w-1.5 h-3 bg-primary-container rounded-full"></span>
+<span class="absolute right-3 w-3 h-1.5 bg-outline rounded-full"></span>
+<span class="absolute bottom-3 w-1.5 h-3 bg-outline rounded-full"></span>
+<span class="absolute left-3 w-3 h-1.5 bg-outline rounded-full"></span>
+<div class="relative w-44 h-44 rounded-full overflow-hidden bg-black flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-500">
+<img alt="AEVUM STACK Precision Chronograph Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRGfUt4EcyCaTs25EvVjuUv3Ebl7HkovGbseT9x22UnYgytreWx9R6ML1h3ZhhkEpMjq6ZkH8vi5jnu-zXqaJHD-2EcXemSjbeBWX0Zh35UIAvzze_iyeAgyrqF2aHLZavyo9ffK9Kyah_FMTSfB_uiESxbD0F3uGT6fPVcJ9Y2m6RO1jL90ssllMj5tKFYtCrWHN1pxrOLWCRh0s_wHAXvNs_m-RPm3ysZqkYNd301xVK0YFk4kNv"/>
+</div>
+<!-- Monospace Coordinates -->
+<div class="absolute -bottom-3 bg-surface-container border border-outline px-3 py-1 rounded text-[10px] font-label-mono text-secondary uppercase tracking-widest">
+                TIME_SCALE // PRECISION
+              </div>
+</div>
+</div>
+</div>
+<!-- Key Value Propositions Strip -->
+<div class="mt-12 pt-8 border-t border-outline-variant grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 bg-surface-container-low border border-outline-variant rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl">sell</span>
+<div>
+<span class="block font-headline-sm text-sm font-semibold text-on-surface uppercase">Transparent Pricing</span>
+<span class="text-[11px] font-label-mono text-secondary">Zero hidden extras</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl">storefront</span>
+<div>
+<span class="block font-headline-sm text-sm font-semibold text-on-surface uppercase">Small Biz &amp; Startups</span>
+<span class="text-[11px] font-label-mono text-secondary">Tailored architectures</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl">smartphone</span>
+<div>
+<span class="block font-headline-sm text-sm font-semibold text-on-surface uppercase">Mobile-First Design</span>
+<span class="text-[11px] font-label-mono text-secondary">Fluid on every screen</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl">schedule</span>
+<div>
+<span class="block font-headline-sm text-sm font-semibold text-on-surface uppercase">On-Time Delivery</span>
+<span class="text-[11px] font-label-mono text-secondary">Predictable schedules</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 2: WHAT WE DO ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-low" id="services">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest block mb-2 font-semibold">01 // ESSENTIAL DIGITAL SYSTEMS</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight">What We Do</h2>
+</div>
+<p class="font-body-md text-secondary max-w-lg leading-relaxed">
+            Practical digital infrastructure engineered for small businesses, local services, clinics, consultants, coaches, and growing startups.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container p-6 rounded border border-outline-variant hover:border-outline transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">devices</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5">Professional Websites</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4">
+                Clean, high-performance web presence that builds instant credibility and turns casual site visitors into confident buyers.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>CORE ASSET</span>
+<span class="text-on-surface font-semibold">FAST &amp; MODERN</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-6 rounded border border-outline-variant hover:border-outline transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">contact_mail</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5">Customer Enquiry Generation</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4">
+                Strategic lead capture forms, WhatsApp direct connection, and high-converting calls-to-action placed right where clients look.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>LEAD FLOW</span>
+<span class="text-on-surface font-semibold">WHATSAPP READY</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-6 rounded border border-outline-variant hover:border-outline transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5">Online Booking &amp; Scheduling</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4">
+                Frictionless appointment and consultation bookings integrated directly into your calendar and client communication flow.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>EFFICIENCY</span>
+<span class="text-on-surface font-semibold">ZERO FRICTION</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-6 rounded border border-outline-variant hover:border-outline transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5">Business Automation</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4">
+                Automated email responses, WhatsApp message pipelines, and CRM integration to save valuable hours every single week.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>PRODUCTIVITY</span>
+<span class="text-on-surface font-semibold">AUTONOMOUS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 3: WEBSITE PACKAGES ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-lowest" id="packages">
+<div class="max-w-[1400px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">02 // FIXED TRANSPARENT PACKAGES</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-on-surface tracking-tight mb-4">
+            Website Packages
+          </h2>
+<p class="font-body-lg text-secondary text-base sm:text-lg">
+            Straightforward pricing tailored for Indian small businesses, consultants, clinics, and startups. Pick the tier that matches your stage.
+          </p>
+</div>
+<!-- 4 Ascending Package Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch mb-10">
+<!-- 1. STARTER -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 flex flex-col justify-between hover:border-outline transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 bg-surface-container-high rounded text-secondary font-semibold">PACKAGE 01</span>
+<span class="font-label-mono text-[11px] text-secondary">FAST START</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface">Starter</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-6">Ideal for single-service professionals and initial online presence.</p>
+<div class="pb-6 border-b border-outline-variant">
+<span class="font-display-hero text-3xl font-bold text-on-surface">₹4,999</span>
+<span class="font-label-mono text-xs text-secondary block mt-1">ONE-TIME INVESTMENT</span>
+</div>
+<!-- Inclusions -->
+<ul class="py-6 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Single Page Website</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Mobile Responsive</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>WhatsApp Button</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Contact Form</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Google Maps Integration</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Basic SEO Setup</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Social Media Links</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 px-4 bg-surface-container-high text-on-surface font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-outline hover:text-white transition-all block mt-4" href="#contact">
+              Select Starter
+            </a>
+</div>
+<!-- 2. BUSINESS (MOST POPULAR) -->
+<div class="bg-surface-container border-2 border-primary-container rounded p-6 flex flex-col justify-between relative shadow-2xl shadow-primary-container/10">
+<!-- Popular Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary-container text-white px-3 py-0.5 rounded-full font-label-mono text-[10px] font-bold uppercase tracking-widest shadow-md">
+              MOST POPULAR
+            </div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 bg-primary-container/20 text-primary-container rounded font-bold">PACKAGE 02</span>
+<span class="font-label-mono text-[11px] text-primary-container font-semibold">CORE BUSINESS</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-white">Business</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-6">Complete website solution for local companies, doctors, clinics &amp; consultancies.</p>
+<div class="pb-6 border-b border-outline-variant">
+<span class="font-display-hero text-3xl font-bold text-white">₹9,999</span>
+<span class="font-label-mono text-xs text-secondary block mt-1">ONE-TIME INVESTMENT</span>
+</div>
+<!-- Inclusions -->
+<div class="pt-4 pb-2">
+<span class="font-label-mono text-[11px] text-primary-container uppercase font-semibold">EVERYTHING IN STARTER, PLUS:</span>
+</div>
+<ul class="py-2 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="font-medium text-white">Up to 5 Pages Website</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Dedicated Service Pages</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Gallery Section</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Testimonials Section</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Lead Forms</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Speed Optimization</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Google Business Integration</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3.5 px-4 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-inverse-primary transition-all shadow-md block mt-4" href="#contact">
+              Select Business
+            </a>
+</div>
+<!-- 3. GROWTH -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 flex flex-col justify-between hover:border-outline transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 bg-surface-container-high rounded text-secondary font-semibold">PACKAGE 03</span>
+<span class="font-label-mono text-[11px] text-secondary">HIGH CONVERSION</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface">Growth</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-6">Designed specifically for proactive client acquisition and direct appointments.</p>
+<div class="pb-6 border-b border-outline-variant">
+<span class="font-display-hero text-3xl font-bold text-on-surface">₹14,999</span>
+<span class="font-label-mono text-xs text-secondary block mt-1">ONE-TIME INVESTMENT</span>
+</div>
+<!-- Inclusions -->
+<div class="pt-4 pb-2">
+<span class="font-label-mono text-[11px] text-secondary uppercase font-semibold">EVERYTHING IN BUSINESS, PLUS:</span>
+</div>
+<ul class="py-2 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="font-medium text-white">Conversion Focused Design</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Lead Capture System</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Booking Forms</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Analytics Setup</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Advanced Local SEO</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Dedicated Landing Page</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Call-To-Action Strategy</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 px-4 bg-surface-container-high text-on-surface font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-outline hover:text-white transition-all block mt-4" href="#contact">
+              Select Growth
+            </a>
+</div>
+<!-- 4. PRO -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 flex flex-col justify-between hover:border-outline transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 bg-surface-container-high rounded text-secondary font-semibold">PACKAGE 04</span>
+<span class="font-label-mono text-[11px] text-secondary">FULL AUTOMATION</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface">Pro</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-6">Complete digital infrastructure with full marketing and follow-up pipelines.</p>
+<div class="pb-6 border-b border-outline-variant">
+<span class="font-display-hero text-3xl font-bold text-on-surface">₹29,999</span>
+<span class="font-label-mono text-xs text-secondary block mt-1">ONE-TIME INVESTMENT</span>
+</div>
+<!-- Inclusions -->
+<div class="pt-4 pb-2">
+<span class="font-label-mono text-[11px] text-secondary uppercase font-semibold">EVERYTHING IN GROWTH, PLUS:</span>
+</div>
+<ul class="py-2 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="font-medium text-white">CRM Setup</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Lead Pipeline Setup</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>WhatsApp Automation</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Email Automation</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>AI Chat Widget</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Automated Follow-Ups</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Reporting Dashboard</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 px-4 bg-surface-container-high text-on-surface font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-outline hover:text-white transition-all block mt-4" href="#contact">
+              Select Pro
+            </a>
+</div>
+</div>
+<!-- Universal Inclusion Banner -->
+<div class="bg-surface-container border border-outline-variant p-5 rounded flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-start sm:items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl shrink-0 mt-0.5 sm:mt-0">verified</span>
+<p class="font-body-sm text-sm text-on-surface">
+<strong class="text-white font-semibold">All packages include:</strong> Domain and Hosting Setup Assistance, Mobile Responsive Design, Basic Security, and On-time Delivery.
+              <span class="text-secondary block sm:inline mt-1 sm:mt-0">(Note: Domain registration and hosting plan fees are billed directly by your registrar/host).</span>
+</p>
+</div>
+<a class="shrink-0 text-xs font-label-mono text-primary-container hover:underline uppercase tracking-wider font-semibold" href="#faq">
+            Read Package FAQ →
+          </a>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 4: MONTHLY SUPPORT PLANS ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-low" id="support-plans">
+<div class="max-w-[1400px] mx-auto">
+<div class="max-w-2xl mb-14">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">03 // ONGOING CARE</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">
+            Monthly Support Plans / Keep Your Business Running
+          </h2>
+<p class="font-body-lg text-secondary text-base">
+            Reliable ongoing maintenance and continuous growth support without hiring in-house technical staff.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Plan 1: CARE -->
+<div class="bg-surface-container border border-outline-variant rounded p-6 flex flex-col justify-between hover:border-outline transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs text-secondary uppercase font-semibold">TIER 01</span>
+<span class="font-label-mono text-[10px] text-secondary">ESSENTIAL CARE</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface">Care</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-5">Continuous site health, backups, and small ongoing revisions.</p>
+<div class="pb-6 border-b border-outline-variant">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white">₹999</span>
+<span class="font-label-mono text-xs text-secondary">/ month</span>
+</div>
+</div>
+<ul class="py-6 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Website Updates</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Security Monitoring</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Regular Backups</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Minor Text &amp; Image Changes</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 bg-surface-container-high text-on-surface font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-outline hover:text-white transition-all block mt-4" href="#contact">
+              Choose Care
+            </a>
+</div>
+<!-- Plan 2: GROWTH -->
+<div class="bg-surface-container border border-outline rounded p-6 flex flex-col justify-between relative shadow-lg">
+<div class="absolute -top-3 right-6 bg-surface-container-highest border border-outline px-2.5 py-0.5 rounded text-[10px] font-label-mono text-primary uppercase font-bold tracking-wider">
+              RECOMMENDED
+            </div>
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs text-primary-container uppercase font-semibold">TIER 02</span>
+<span class="font-label-mono text-[10px] text-secondary">ACTIVE GROWTH</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-white">Growth</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-5">Search engine visibility optimizations and active conversion tune-ups.</p>
+<div class="pb-6 border-b border-outline-variant">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white">₹2,999</span>
+<span class="font-label-mono text-xs text-secondary">/ month</span>
+</div>
+</div>
+<div class="pt-4 pb-2">
+<span class="font-label-mono text-[11px] text-primary-container uppercase font-semibold">EVERYTHING IN CARE, PLUS:</span>
+</div>
+<ul class="py-2 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span class="text-white">Ongoing SEO Updates</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Monthly Performance Reports</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Landing Page Refinements</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-inverse-primary transition-all block mt-4" href="#contact">
+              Choose Growth
+            </a>
+</div>
+<!-- Plan 3: AUTOMATION -->
+<div class="bg-surface-container border border-outline-variant rounded p-6 flex flex-col justify-between hover:border-outline transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-xs text-secondary uppercase font-semibold">TIER 03</span>
+<span class="font-label-mono text-[10px] text-secondary">PIPELINES</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface">Automation</h3>
+<p class="font-body-sm text-xs text-secondary mt-1 mb-5">Continuous CRM maintenance, webhook checks, and funnel improvements.</p>
+<div class="pb-6 border-b border-outline-variant">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white">₹4,999</span>
+<span class="font-label-mono text-xs text-secondary">/ month</span>
+</div>
+</div>
+<div class="pt-4 pb-2">
+<span class="font-label-mono text-[11px] text-secondary uppercase font-semibold">EVERYTHING IN GROWTH, PLUS:</span>
+</div>
+<ul class="py-2 space-y-3 font-body-sm text-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span class="text-white">CRM Maintenance</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Automation Monitoring</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span>Workflow &amp; Pipeline Improvements</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 bg-surface-container-high text-on-surface font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-outline hover:text-white transition-all block mt-4" href="#contact">
+              Choose Automation
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 5: HOW IT WORKS ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-lowest" id="how-it-works">
+<div class="max-w-[1400px] mx-auto">
+<div class="mb-14">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">04 // SIMPLE WORKFLOW</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">
+            How It Works / From Inquiry to Launch
+          </h2>
+<p class="font-body-lg text-secondary text-base max-w-2xl">
+            A linear, distraction-free roadmap designed to get your business website live quickly without technical headaches.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 01 -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-display-hero text-3xl font-bold text-primary-container">01</span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded">PHASE ONE</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Tell Us About Your Business</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+                Share your business goals, target audience, services, and current operational requirements through our simple brief.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary">
+              OUTPUT: INTAKE BRIEF
+            </div>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-display-hero text-3xl font-bold text-primary-container">02</span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded">PHASE TWO</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Choose Your Package</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+                Select Starter, Business, Growth, or Pro with transparent fixed pricing, verified scope, and zero billing surprises.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary">
+              OUTPUT: FIXED SCOPE AGREEMENT
+            </div>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-display-hero text-3xl font-bold text-primary-container">03</span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded">PHASE THREE</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">We Design &amp; Build Your Website</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+                We craft clean layouts, mobile interfaces, conversion CTAs, and integrate growth automations according to your chosen plan.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary">
+              OUTPUT: INTERACTIVE STAGING
+            </div>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-display-hero text-3xl font-bold text-primary-container">04</span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded">PHASE FOUR</span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Review &amp; Launch</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+                Preview staging, approve revisions, and go live on your custom domain with full technical handover and support.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-primary-container font-semibold">
+              OUTPUT: LIVE ON CUSTOM DOMAIN
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 6: WHY CHOOSE US ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-low">
+<div class="max-w-[1400px] mx-auto">
+<div class="max-w-2xl mb-14">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">05 // CORE ADVANTAGE</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">
+            Why Choose Aevum Stack
+          </h2>
+<p class="font-body-lg text-secondary text-base">
+            No empty buzzwords, vanity awards, or inflated metrics. Just clean engineering calibrated for measurable commercial outcomes.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4 block">palette</span>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Personalised Design</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+              Custom-tailored layouts engineered for your specific business archetype, not generic template clones or bloated cookie-cutter themes.
+            </p>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4 block">payments</span>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Clear &amp; Honest Pricing</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+              Fixed package rates with transparent scope and zero hidden hourly retainers. You know exactly what is delivered before starting.
+            </p>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4 block">smartphone</span>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Responsive &amp; Mobile-First</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+              Every screen rigorously calibrated for seamless performance across phones, tablets, and desktops so no client inquiry is lost.
+            </p>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4 block">support_agent</span>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2">Dependable Ongoing Support</h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed">
+              Direct human communication and monthly maintenance plans to keep your site updated, secure, and running smoothly week after week.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 7: FAQ ==================== -->
+<section class="w-full px-4 md:px-8 py-20 border-b border-outline-variant bg-surface-container-lowest" id="faq">
+<div class="max-w-[1400px] mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">06 // TRANSPARENCY &amp; DETAILS</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">
+            Frequently Asked Questions
+          </h2>
+<p class="font-body-md text-secondary">
+            Clear, straightforward answers about our website packages, technical setup, and ongoing operations.
+          </p>
+</div>
+<div class="max-w-4xl mx-auto space-y-4">
+<!-- FAQ Item 1 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all" open="">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>What is included in each package?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Every tier includes domain &amp; hosting setup assistance, responsive mobile-first engineering, clean semantic markup, security best practices, and the exact deliverables listed in the package breakdown above.
+            </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>Is domain registration included?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              We provide complete setup assistance and DNS configuration at no extra cost. Domain registration fees are paid directly to your chosen registrar (e.g., Cloudflare, Namecheap, GoDaddy) so you retain 100% legal ownership of your business domain.
+            </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>Are hosting renewals included?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Hosting setup assistance is provided. Ongoing server subscriptions are managed on your preferred hosting account or can be handled as part of our monthly support plans for completely hands-off maintenance.
+            </div>
+</details>
+<!-- FAQ Item 4 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>Can I upgrade my package later?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Yes, absolutely. Many clients start with the Starter or Business package and seamlessly upgrade to Growth or Pro as customer volume and automation needs expand.
+            </div>
+</details>
+<!-- FAQ Item 5 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>What are the monthly support plans?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Our Care (₹999/mo), Growth (₹2,999/mo), and Automation (₹4,999/mo) plans offer total peace of mind with continuous software updates, security monitoring, regular backups, and ongoing refinements without requiring you to hire an internal webmaster.
+            </div>
+</details>
+<!-- FAQ Item 6 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>Are CRM and WhatsApp API subscriptions included?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Setup, architectural wiring, and integration into your website are fully included in the Pro package. Any recurring external third-party API or software subscription fees (e.g. WhatsApp Business Cloud API, CRM licenses) are billed directly by their respective providers.
+            </div>
+</details>
+<!-- FAQ Item 7 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>How long does delivery take?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              Starter websites typically launch in 5–7 business days, while Business and Growth websites take approximately 10–14 days, depending on content readiness and review turnaround.
+            </div>
+</details>
+<!-- FAQ Item 8 -->
+<details class="bg-surface-container-low border border-outline-variant rounded group transition-all">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none">
+<span>Who provides website content and images?</span>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 text-xl transition-transform">expand_more</span>
+</summary>
+<div class="px-5 pb-5 pt-1 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed">
+              You provide your core business details, services, contact information, and business photos. We provide professional content structure guidance, styling refinement, and high-resolution royalty-free asset curation where required.
+            </div>
+</details>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 8: CONTACT ==================== -->
+<section class="w-full px-4 md:px-8 py-20 bg-surface-container-low" id="contact">
+<div class="max-w-[1400px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Context Column -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">07 // DIRECT ENQUIRY</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-4">
+                Initiate Dialogue / Start Your Project
+              </h2>
+<p class="font-body-lg text-secondary text-base leading-relaxed mb-8">
+                Tell us about your business, current digital challenges, and target milestones. We respond with a clear proposal within 24 hours.
+              </p>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">DIRECT EMAIL</span>
+<a class="font-body-md text-sm text-on-surface hover:text-primary-container transition-colors" href="mailto:studio@aevumstack.dev">studio@aevumstack.dev</a>
+</div>
+</div>
+<div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-xl">chat</span>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">WHATSAPP DIRECT ENQUIRY</span>
+<a class="font-body-md text-sm text-on-surface hover:text-primary-container transition-colors" href="https://wa.me/?text=Hello%20Aevum%20Stack%2C%20I%20am%20interested%20in%20a%20website%20project." rel="noopener" target="_blank">Chat via WhatsApp Direct</a>
+</div>
+</div>
+<div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">RESPONSE TIMEFRAME</span>
+<span class="font-body-md text-sm text-on-surface">Under 24 Hours (Mon – Sat)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-outline-variant text-xs text-secondary leading-relaxed">
+<span class="font-label-mono text-[10px] text-on-surface uppercase block font-semibold mb-1">NOTE ON SUBMISSIONS</span>
+              Form submission triggers direct studio communication. Form integration and notification routing are configured during setup.
+            </div>
+</div>
+<!-- Form Card -->
+<div class="lg:col-span-7 bg-surface-container p-6 sm:p-8 rounded border border-outline-variant shadow-xl">
+<form class="space-y-5" id="project-form" onsubmit="event.preventDefault(); document.getElementById('contact-success-msg').classList.remove('hidden'); this.reset();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="full-name">Full Name *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus:outline-none focus:border-primary-container transition-colors placeholder:text-neutral-600" id="full-name" placeholder="e.g. Rahul Sharma" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="business-name">Business Name *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus:outline-none focus:border-primary-container transition-colors placeholder:text-neutral-600" id="business-name" placeholder="e.g. Apex Health Clinic" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="contact-info">Email Address or Phone Number *</label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus:outline-none focus:border-primary-container transition-colors placeholder:text-neutral-600" id="contact-info" placeholder="name@company.com or +91..." required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="selected-package">Selected Package *</label>
+<select class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus:outline-none focus:border-primary-container transition-colors" id="selected-package">
+<option value="business">Business Package — ₹9,999 (Most Popular)</option>
+<option value="starter">Starter Package — ₹4,999</option>
+<option value="growth">Growth Package — ₹14,999</option>
+<option value="pro">Pro Package — ₹29,999</option>
+<option value="custom">Custom / Monthly Support Plan</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="project-description">Project Description *</label>
+<textarea class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus:outline-none focus:border-primary-container transition-colors placeholder:text-neutral-600" id="project-description" placeholder="Briefly describe what your business does and what you need your website to achieve..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3.5 px-6 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded hover:bg-inverse-primary hover:shadow-lg hover:shadow-primary-container/20 transition-all flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
+<span>Submit Inquiry</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<!-- Success Feedback -->
+<div class="hidden p-3.5 bg-surface-container-high border border-primary-container text-white font-label-mono text-xs uppercase rounded flex items-center gap-2.5" id="contact-success-msg">
+<span class="material-symbols-outlined text-primary-container text-lg">check_circle</span>
+<span>Thank you. Your enquiry has been received. We will reach out within 24 hours.</span>
+</div>
+<p class="font-body-sm text-xs text-secondary text-center pt-2">
+                Or email directly at <a class="text-primary-container hover:underline font-mono font-medium" href="mailto:studio@aevumstack.dev">studio@aevumstack.dev</a> / WhatsApp direct enquiry.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ==================== FOOTER ==================== -->
+<footer class="w-full bg-[#030303] border-t border-outline-variant">
+<div class="max-w-[1400px] mx-auto px-4 md:px-8 py-14">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-outline-variant">
+<!-- Brand Summary -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline bg-black flex items-center justify-center p-0.5">
+<img alt="AEVUM STACK Clock" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRGfUt4EcyCaTs25EvVjuUv3Ebl7HkovGbseT9x22UnYgytreWx9R6ML1h3ZhhkEpMjq6ZkH8vi5jnu-zXqaJHD-2EcXemSjbeBWX0Zh35UIAvzze_iyeAgyrqF2aHLZavyo9ffK9Kyah_FMTSfB_uiESxbD0F3uGT6fPVcJ9Y2m6RO1jL90ssllMj5tKFYtCrWHN1pxrOLWCRh0s_wHAXvNs_m-RPm3ysZqkYNd301xVK0YFk4kNv"/>
+</div>
+<span class="font-headline-sm text-lg uppercase font-bold text-on-surface tracking-wider">AEVUM STACK</span>
+</div>
+<p class="font-body-md text-sm text-secondary max-w-sm leading-relaxed">
+              Professional website design and digital growth systems for modern businesses. Practical, performance-focused, and delivered on schedule.
+            </p>
+</div>
+<div>
+<span class="font-label-mono text-[10px] text-secondary uppercase block mb-1">Direct Studio Channel</span>
+<a class="font-label-mono text-sm text-primary-container hover:underline" href="mailto:studio@aevumstack.dev">studio@aevumstack.dev</a>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<span class="font-label-mono text-xs uppercase text-on-surface font-semibold tracking-wider">Site Navigation</span>
+<div class="flex flex-col gap-2 font-body-sm text-sm text-secondary">
+<a class="hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-white transition-colors" href="#services">Services</a>
+<a class="hover:text-white transition-colors" href="#packages">Website Packages</a>
+<a class="hover:text-white transition-colors" href="#support-plans">Monthly Support Plans</a>
+<a class="hover:text-white transition-colors" href="#how-it-works">How It Works</a>
+<a class="hover:text-white transition-colors" href="#faq">Frequently Asked Questions</a>
+<a class="hover:text-white transition-colors" href="#contact">Contact &amp; Enquiry</a>
+</div>
+</div>
+<!-- Operational Info -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-6">
+<div>
+<span class="font-label-mono text-xs uppercase text-on-surface font-semibold tracking-wider block mb-3">Base &amp; Operational Time</span>
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded border border-outline-variant text-xs font-label-mono text-on-surface mb-3">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>IST (UTC+5:30) • BENGALURU, INDIA</span>
+</div>
+<p class="font-body-sm text-xs text-secondary leading-relaxed">
+              Serving businesses across India and asynchronous international clients.
+            </p>
+</div>
+<div>
+<span class="font-label-mono text-[10px] text-secondary uppercase block mb-1">OFFICIAL DOMAIN</span>
+<span class="font-label-mono text-xs text-on-surface">aevumstack.dev</span>
+</div>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-mono text-xs text-secondary">
+<p>© 2025 AEVUM STACK (aevumstack.dev). All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="#contact">Terms &amp; Engagement</a>
+<span class="text-outline">/</span>
+<a class="hover:text-white transition-colors" href="#contact">Privacy Notice</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

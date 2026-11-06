@@ -1,0 +1,371 @@
+/* Same approved Google Fonts asset, aliased so 400-weight hero text cannot restyle other sections. */
+@font-face {
+ font-family:'Signal Grotesk'; font-style:normal; font-weight:400 700; font-display:swap;
+ src:url('https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2') format('woff2');
+}
+/* Approved SIGNAL hero. Local tokens and selectors deliberately stop at this section. */
+.v2 .signal-hero {
+ --carbon:#0B0D10; --steel:#192127; --white:#F3F0E8; --signal:#FF5C40;
+ --mist:#AAB2B8; --ink-soft:#4b555c; --line:#c9cbc6;
+ --mono:ui-monospace,SFMono-Regular,Consolas,monospace; --sans:'Signal Grotesk','Space Grotesk',Arial,sans-serif;
+ background:var(--white); color:var(--carbon); font-family:Inter,Arial,sans-serif;
+ line-height:normal; isolation:isolate;
+}
+.v2 .signal-hero *, .v2 .signal-hero *::before, .v2 .signal-hero *::after { box-sizing:border-box; }
+.v2 .signal-hero a { text-decoration:none; }
+.v2 .signal-hero button { font:inherit; }
+.v2 .signal-hero a:focus-visible, .v2 .signal-hero button:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
+.v2 .signal-hero .sr-only { position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden; }
+.v2 .signal-hero ::selection { background:#FF5C40; color:#0B0D10; }
+.v2 .signal-hero a:focus-visible,
+.v2 .signal-hero button:focus-visible { outline:3px solid currentColor;outline-offset:5px }
+.v2 .signal-hero #signal-run[hidden],
+.v2 .signal-hero #signal-sample-start[hidden] { display:none }
+.v2 .signal-hero.signal-ready .nojs-action { display:none }
+.v2 .signal-hero .editorial { max-width:1600px;margin:auto;padding:31px 64px 0 }
+.v2 .signal-hero .edition { display:flex;justify-content:space-between;align-items:center;font:10px/1.4 var(--mono);letter-spacing:.07em;color:var(--ink-soft) }
+.v2 .signal-hero .edition>span:first-child { display:flex;align-items:center;gap:10px }
+.v2 .signal-hero .edition b { width:9px;height:9px;background:var(--signal) }
+.v2 .signal-hero .hero-heading { display:grid;grid-template-columns:1fr 295px;gap:55px;align-items:end;margin:32px 0 0 }
+.v2 .signal-hero h1 { font:500 clamp(54px,6.6vw,102px)/.99 var(--sans);letter-spacing:-.07em;margin:0 }
+.v2 .signal-hero h1>span { color:#606a70 }
+.v2 .signal-hero .signal-stop { color:#bd321d }
+.v2 .signal-hero .intent { padding-bottom:3px }
+.v2 .signal-hero .intent p { font-size:15px;line-height:1.65;max-width:285px;color:var(--ink-soft);margin:0 0 26px }
+.v2 .signal-hero .intent strong { font-weight:500;color:var(--carbon) }
+.v2 .signal-hero .primary { display:flex;justify-content:space-between;align-items:center;padding:15px 17px;background:var(--carbon);color:var(--white);font-size:12px;max-width:255px;border:1px solid var(--carbon);transition:background .2s }
+.v2 .signal-hero .primary:hover { background:var(--steel) }
+.v2 .signal-hero .primary span { color:var(--signal);font-size:20px;line-height:1 }
+.v2 .signal-hero .lead-out { display:flex;align-items:center;position:relative;margin-top:29px;height:92px;gap:20px }
+.v2 .signal-hero .lead-rule { width:40px;height:2px;background:var(--carbon) }
+.v2 .signal-hero .lead-out p { font-size:12px;line-height:1.6;color:var(--ink-soft);margin:0 }
+.v2 .signal-hero .lead-out strong { font-weight:500;color:var(--carbon) }
+.v2 .signal-hero .sweep { position:absolute;width:280px;height:90px;left:46%;top:3px;overflow:visible;fill:none;stroke:var(--signal);stroke-width:2 }
+.v2 .signal-hero .prototype-label { margin-left:auto;font:9px/1.6 var(--mono);letter-spacing:.04em;color:var(--ink-soft) }
+.v2 .signal-hero .workbench { background:var(--carbon);color:var(--white);position:relative;padding:0 64px;isolation:isolate }
+.v2 .signal-hero .workbench:before { content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(110deg,#ffffff04,transparent 35%,#96acbd08);border-top:1px solid #333b40 }
+.v2 .signal-hero .bench-top { max-width:1472px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:27px 0 28px }
+.v2 .signal-hero .bench-name { display:flex;gap:15px;align-items:center;font:12px var(--sans);letter-spacing:.01em }
+.v2 .signal-hero .bench-name div>span { display:block;font:8px var(--mono);letter-spacing:.12em;margin-top:7px;color:var(--mist) }
+.v2 .signal-hero .bench-mark { display:grid;place-items:center;width:33px;height:33px;border:1px solid #606c75;font:24px var(--sans);color:var(--signal) }
+.v2 .signal-hero #signal-run { display:flex;align-items:center;gap:14px;min-height:44px;padding:11px 16px;border:1px solid var(--signal);background:var(--signal);color:var(--carbon);font-weight:600;font-size:11px;cursor:pointer;transition:background .2s }
+.v2 .signal-hero #signal-run:hover { background:#ff7b64 }
+.v2 .signal-hero #signal-run:disabled { cursor:wait;background:#263039;color:var(--white);border-color:#74838d }
+.v2 .signal-hero .journey { max-width:1472px;margin:auto;display:grid;grid-template-columns:1.12fr 1fr .97fr;gap:35px;position:relative }
+.v2 .signal-hero .signal-track { position:absolute;left:14px;right:14px;height:1px;background:#65717a;top:20px;pointer-events:none }
+.v2 .signal-hero .signal-progress { position:absolute;inset:0;transform-origin:left;transform:scaleX(0);background:var(--signal);transition:transform 1s cubic-bezier(.3,0,.2,1);height:2px }
+.v2 .signal-hero .traveller { position:absolute;width:8px;height:8px;left:0;top:-3px;background:var(--signal);opacity:0;transition:left 1s cubic-bezier(.3,0,.2,1);box-shadow:0 0 12px #ff5c4060 }
+.v2 .signal-hero .stage { min-width:0;position:relative;padding-top:45px }
+.v2 .signal-hero .stage-heading { display:flex;gap:11px;align-items:center;position:relative;margin-bottom:19px }
+.v2 .signal-hero .index { position:absolute;top:-44px;left:0;font:10px var(--mono);display:grid;place-items:center;background:var(--carbon);border:1px solid #74818b;width:29px;height:29px;z-index:1;color:var(--mist);transition:background .25s,color .25s }
+.v2 .signal-hero .stage h2 { font:500 18px/1.2 var(--sans);margin:0;letter-spacing:-.03em }
+.v2 .signal-hero .type { margin-left:auto;font:8px var(--mono);color:var(--mist);letter-spacing:.04em }
+.v2 .signal-hero .website-window { background:var(--white);color:var(--carbon);border:1px solid var(--white);min-height:344px }
+.v2 .signal-hero .window-bar { display:flex;align-items:center;gap:8px;background:#e4e3dc;height:35px;padding:0 14px;font:8px var(--mono);color:#47535b }
+.v2 .signal-hero .window-bar>span:last-child { margin-left:auto;font-size:15px }
+.v2 .signal-hero .window-dot { width:5px;height:5px;background:#65737b;border-radius:50% }
+.v2 .signal-hero .sample { padding:18px 18px 16px;position:relative;height:270px;overflow:hidden;background:#edeae0 }
+.v2 .signal-hero .sample-brand { font:600 16px var(--sans);letter-spacing:-.06em;position:relative;z-index:1 }
+.v2 .signal-hero .sample-brand span { font:6px var(--mono);letter-spacing:.04em;display:block;margin-top:4px }
+.v2 .signal-hero .sample h3 { font:500 39px/.98 var(--sans);letter-spacing:-.06em;margin:34px 0 21px;position:relative;z-index:1 }
+.v2 .signal-hero .sample-visual { position:absolute;right:-35px;top:12px;width:155px;height:200px;transform:rotate(-18deg);opacity:.9 }
+.v2 .signal-hero .shape { position:absolute;border:20px solid #AAB2B8;box-shadow:8px 10px 0 #19212717 }
+.v2 .signal-hero .shape-one { width:118px;height:118px;border-radius:0 0 100% 0;top:28px;right:-8px }
+.v2 .signal-hero .shape-two { width:62px;height:62px;left:0;bottom:12px;border:0;background:#82929c }
+.v2 .signal-hero .shape-three { width:28px;height:28px;right:18px;top:0;border:0;background:#FF5C40 }
+.v2 .signal-hero .sample-visual>span { position:absolute;bottom:-28px;right:35px;font:9px var(--mono);color:#4b555c }
+.v2 .signal-hero .sample-bottom { display:flex;justify-content:space-between;align-items:end;position:relative;z-index:1 }
+.v2 .signal-hero .sample-bottom p { font-size:9px;line-height:1.5;margin:0;color:#4b555c }
+.v2 .signal-hero .sample-bottom button,
+.v2 .signal-hero .nojs-action { color:var(--carbon);background:none;border:0;border-bottom:1px solid #65737b;padding:9px 0;font:500 11px var(--sans);cursor:pointer }
+.v2 .signal-hero .sample-bottom button span { margin-left:12px }
+.v2 .signal-hero .sample-bottom button:hover { border-color:var(--carbon) }
+.v2 .signal-hero .sample-bottom button:disabled { cursor:wait }
+.v2 .signal-hero .sample-receipt { display:flex;gap:8px;align-items:center;border-top:1px solid #c9cdc3;padding:12px;font-size:10px;color:#4b555c;min-height:38px }
+.v2 .signal-hero .state-square { width:5px;height:5px;background:#64727a;flex-shrink:0 }
+.v2 .signal-hero .stage-note { margin:17px 0 24px;font-size:11px;line-height:1.65;color:var(--mist) }
+.v2 .signal-hero .booking-surface { padding:18px 0 0;min-height:344px;border-top:1px solid #536069;display:flex;flex-direction:column }
+.v2 .signal-hero .booking-intro { display:flex;justify-content:space-between;font:9px var(--mono);color:var(--mist) }
+.v2 .signal-hero .booking-surface h3 { font:400 32px/1.08 var(--sans);letter-spacing:-.045em;margin:21px 0 24px }
+.v2 .signal-hero .schedule-heading { display:flex;justify-content:space-between;font-size:11px;color:var(--mist) }
+.v2 .signal-hero .days { display:flex;gap:5px;margin:13px 0 15px }
+.v2 .signal-hero .days>div { display:flex;flex:1;align-items:center;flex-direction:column;gap:8px;padding:10px 6px;border:1px solid transparent }
+.v2 .signal-hero .days span { font:8px var(--mono);color:var(--mist) }
+.v2 .signal-hero .days b { font:400 20px var(--sans) }
+.v2 .signal-hero .days .picked { border:1px solid #65737b;background:#192127 }
+.v2 .signal-hero .days .picked span { color:var(--white) }
+.v2 .signal-hero .times { display:flex;gap:7px }
+.v2 .signal-hero .times>span { border:1px solid #65737b;padding:10px 8px;text-align:center;flex:1;font:12px var(--sans);color:var(--mist) }
+.v2 .signal-hero .times .chosen { background:var(--white);color:var(--carbon);border-color:var(--white) }
+.v2 .signal-hero .chosen>span { margin-left:9px }
+.v2 .signal-hero .booking-receipt { display:flex;gap:10px;align-items:center;margin-top:19px;border-top:1px solid #536069;padding-top:13px }
+.v2 .signal-hero .receipt-symbol { font-size:24px;color:var(--mist) }
+.v2 .signal-hero .booking-receipt strong { display:block;font-size:10px;font-weight:500 }
+.v2 .signal-hero .booking-receipt div>span { font-size:9px;color:var(--mist);display:block;margin-top:5px }
+.v2 .signal-hero .automation-surface { background:var(--steel);padding:19px 21px 0;min-height:344px;border-top:1px solid #556775;display:flex;flex-direction:column }
+.v2 .signal-hero .automation-caption { display:flex;align-items:center;gap:12px;font:8px/1.5 var(--mono);color:var(--mist) }
+.v2 .signal-hero .automation-caption img { filter:invert(1);width:30px;height:30px }
+.v2 .signal-hero .automation-surface h3 { font:400 30px/1.08 var(--sans);letter-spacing:-.045em;margin:18px 0 20px }
+.v2 .signal-hero .task-list { list-style:none;margin:0;padding:0 }
+.v2 .signal-hero .task-list li { position:relative;display:flex;align-items:center;gap:10px;padding-bottom:19px }
+.v2 .signal-hero .task-icon { font:8px var(--mono);width:23px;height:23px;border:1px solid #73818a;display:grid;place-items:center;flex-shrink:0;position:relative;z-index:1;background:var(--steel) }
+.v2 .signal-hero .task-list li:not(:last-child):after { content:'';position:absolute;width:1px;top:23px;bottom:0;left:11px;background:#69777f }
+.v2 .signal-hero .task-list strong { font-size:11px;font-weight:500;display:block }
+.v2 .signal-hero .task-list div>span { font-size:9px;color:var(--mist);display:block;margin-top:4px }
+.v2 .signal-hero .task-check { margin-left:auto;opacity:0;color:var(--signal);font-size:15px }
+.v2 .signal-hero .automation-receipt { margin:auto -21px 0;padding:13px 15px;border-top:1px solid #536069;display:flex;gap:8px;align-items:center;font:9px var(--mono);color:var(--mist) }
+.v2 .signal-hero .bench-footer { max-width:1472px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #536069;min-height:57px;gap:20px }
+.v2 .signal-hero .bench-footer>span:first-child { font:9px var(--mono);letter-spacing:.03em;color:var(--white) }
+.v2 .signal-hero .bench-footer>span:nth-child(2) { font-size:10px;color:var(--mist) }
+.v2 .signal-hero .footer-code { font:9px var(--mono);color:var(--mist) }
+.v2 .signal-hero .signature { max-width:1600px;display:flex;justify-content:space-between;align-items:center;margin:auto;padding:28px 64px }
+.v2 .signal-hero .signature>span { font:8px/1.6 var(--mono);letter-spacing:.04em;color:var(--ink-soft) }
+.v2 .signal-hero .signature p { font:500 21px var(--sans);letter-spacing:-.03em;margin:0 }
+.v2 .signal-hero .signature em { font-family:Georgia,serif;font-weight:400 }
+.v2 .signal-hero .signature>a { font-size:11px;border-bottom:1px solid #83908e;padding-bottom:6px }
+.v2 .signal-hero .signature>a span { margin-left:12px }
+.v2 .signal-hero .workbench[data-stage='website'] .website .index,
+.v2 .signal-hero .workbench[data-stage='booking'] .website .index,
+.v2 .signal-hero .workbench[data-stage='booking'] .booking .index,
+.v2 .signal-hero .workbench[data-stage='automation'] .index,
+.v2 .signal-hero .workbench[data-stage='complete'] .index { background:var(--signal);color:var(--carbon);border-color:var(--signal) }
+.v2 .signal-hero .workbench:not([data-stage='idle']) .website .state-square { background:#a02a18 }
+.v2 .signal-hero .workbench:not([data-stage='idle']) .traveller { opacity:1 }
+.v2 .signal-hero .workbench[data-flow='booking'] .signal-progress { transform:scaleX(var(--booking-progress,.35)) }
+.v2 .signal-hero .workbench[data-flow='booking'] .traveller { left:calc(var(--booking-progress,.35)*100%) }
+.v2 .signal-hero .workbench[data-flow='automation'] .signal-progress { transform:scaleX(var(--automation-progress,.69)) }
+.v2 .signal-hero .workbench[data-flow='automation'] .traveller { left:calc(var(--automation-progress,.69)*100%) }
+.v2 .signal-hero .workbench[data-flow='complete'] .signal-progress { transform:scaleX(1) }
+.v2 .signal-hero .workbench[data-flow='complete'] .traveller { left:100% }
+.v2 .signal-hero .workbench[data-stage='booking'] .picked,
+.v2 .signal-hero .workbench[data-stage='automation'] .picked,
+.v2 .signal-hero .workbench[data-stage='complete'] .picked { border-color:var(--signal) }
+.v2 .signal-hero .workbench[data-stage='booking'] .receipt-symbol,
+.v2 .signal-hero .workbench[data-stage='automation'] .receipt-symbol,
+.v2 .signal-hero .workbench[data-stage='complete'] .receipt-symbol { color:var(--signal) }
+.v2 .signal-hero .task-list li.done .task-icon { background:var(--signal);color:var(--carbon);border-color:var(--signal) }
+.v2 .signal-hero .task-list li.done .task-check { opacity:1 }
+.v2 .signal-hero .workbench[data-stage='complete'] .automation-receipt .state-square { background:var(--signal) }
+@media(min-width:1600px) {
+.v2 .signal-hero .workbench { padding-inline:max(64px,calc((100vw - 1472px)/2)) }
+}
+@media(max-width:1100px) {
+.v2 .signal-hero .editorial { padding-inline:36px }
+.v2 .signal-hero .workbench { padding-inline:36px }
+.v2 .signal-hero .signature { padding-inline:36px }
+.v2 .signal-hero .hero-heading { grid-template-columns:1fr 245px;gap:28px }
+.v2 .signal-hero h1 { font-size:7.2vw }
+.v2 .signal-hero .intent p { font-size:13px }
+.v2 .signal-hero .journey { gap:24px;grid-template-columns:1fr 1fr 1fr }
+.v2 .signal-hero .stage h2 { font-size:16px }
+.v2 .signal-hero .type { display:none }
+.v2 .signal-hero .sample { padding:16px 12px }
+.v2 .signal-hero .sample h3 { font-size:33px }
+.v2 .signal-hero .sample-visual { right:-75px }
+.v2 .signal-hero .sample-bottom button { font-size:10px }
+.v2 .signal-hero .sample-bottom p { font-size:8px }
+.v2 .signal-hero .booking-surface h3 { font-size:28px }
+.v2 .signal-hero .automation-surface { padding:18px 14px 0 }
+.v2 .signal-hero .automation-surface h3 { font-size:26px }
+.v2 .signal-hero .automation-receipt { margin-inline:-14px;padding-inline:12px;font-size:8px }
+.v2 .signal-hero .task-list strong { font-size:10px }
+.v2 .signal-hero .task-list div>span { font-size:8px }
+.v2 .signal-hero .signature p { font-size:18px }
+}
+@media(max-width:800px) and (min-width:601px) {
+.v2 .signal-hero .hero-heading { grid-template-columns:1fr }
+.v2 .signal-hero .intent { display:flex;justify-content:space-between;align-items:center;gap:30px }
+.v2 .signal-hero .intent p { margin:0;max-width:330px }
+.v2 .signal-hero h1 { font-size:76px }
+.v2 .signal-hero .primary { min-width:220px }
+.v2 .signal-hero .journey { grid-template-columns:1fr 1fr }
+.v2 .signal-hero .automation { grid-column:1/-1;max-width:none }
+.v2 .signal-hero .automation-surface { display:grid;grid-template-columns:1fr 1.3fr;min-height:auto;gap:15px;padding:20px }
+.v2 .signal-hero .automation-caption { grid-column:1;grid-row:1 }
+.v2 .signal-hero .automation-surface h3 { grid-column:1;grid-row:2;margin:0 }
+.v2 .signal-hero .task-list { grid-column:2;grid-row:1/3 }
+.v2 .signal-hero .automation-receipt { grid-column:1/-1;margin:0 -20px -20px }
+.v2 .signal-hero .automation .stage-note { display:none }
+.v2 .signal-hero .automation .index { display:none }
+.v2 .signal-hero .signal-track { right:0 }
+.v2 .signal-hero .workbench[data-flow='booking'] .signal-progress { transform:scaleX(.5) }
+.v2 .signal-hero .workbench[data-flow='booking'] .traveller { left:50% }
+.v2 .signal-hero .workbench[data-flow='automation'] .signal-progress { transform:scaleX(1) }
+.v2 .signal-hero .workbench[data-flow='automation'] .traveller { left:100% }
+.v2 .signal-hero .bench-footer { margin-top:20px }
+.v2 .signal-hero .footer-code { display:none }
+}
+@media(max-width:600px) {
+.v2 .signal-hero .editorial { padding:22px 22px 0 }
+.v2 .signal-hero .edition { font-size:8px }
+.v2 .signal-hero .edition>span:last-child { display:none }
+.v2 .signal-hero .hero-heading { display:block;margin-top:26px }
+.v2 .signal-hero h1 { font-size:clamp(40px,11.8vw,70px);line-height:1.02;letter-spacing:-.065em }
+.v2 .signal-hero h1>span { display:inline-block;margin-top:6px }
+.v2 .signal-hero .intent { padding:0;margin-top:25px }
+.v2 .signal-hero .intent p { font-size:13px;line-height:1.7;max-width:310px;margin:0 0 21px }
+.v2 .signal-hero .primary { max-width:100%;padding:15px 16px;font-size:12px;min-height:48px }
+.v2 .signal-hero .lead-out { margin-top:21px;height:76px;gap:12px }
+.v2 .signal-hero .lead-rule { width:22px }
+.v2 .signal-hero .lead-out p { font-size:10px }
+.v2 .signal-hero .sweep { width:100px;height:70px;left:auto;right:2px;top:8px;stroke-width:3 }
+.v2 .signal-hero .prototype-label { display:none }
+.v2 .signal-hero .workbench { padding:0 22px }
+.v2 .signal-hero .bench-top { padding:23px 0 28px;gap:15px;align-items:center }
+.v2 .signal-hero .bench-name { font-size:10px;max-width:200px;line-height:1.4;gap:10px }
+.v2 .signal-hero .bench-name div>span { font-size:6px;letter-spacing:.02em;line-height:1.5;margin-top:5px }
+.v2 .signal-hero .bench-mark { width:26px;height:26px;flex-shrink:0;font-size:21px }
+.v2 .signal-hero #signal-run { padding:10px;gap:7px;font-size:10px;min-height:44px;flex-shrink:0 }
+.v2 .signal-hero #signal-run svg { width:10px }
+.v2 .signal-hero .journey { display:block;padding-left:28px }
+.v2 .signal-hero .signal-track { left:7px;top:14px;bottom:36px;height:auto;width:1px;right:auto }
+.v2 .signal-hero .signal-progress { transform-origin:top;transform:scaleY(0);width:2px;height:100%;transition:transform 1s ease }
+.v2 .signal-hero .traveller { left:-3px;top:0;transition:top 1s ease }
+.v2 .signal-hero .stage { padding-top:0;margin-bottom:28px }
+.v2 .signal-hero .stage-heading { min-height:29px;margin-bottom:12px }
+.v2 .signal-hero .index { left:-35px;top:0;width:23px;height:23px;font-size:8px }
+.v2 .signal-hero .stage h2 { font-size:17px }
+.v2 .signal-hero .type { display:block;font-size:7px }
+.v2 .signal-hero .website-window { min-height:0 }
+.v2 .signal-hero .window-bar { font-size:7px;height:31px;padding:0 11px }
+.v2 .signal-hero .sample { height:251px;padding:16px }
+.v2 .signal-hero .sample-brand { font-size:15px }
+.v2 .signal-hero .sample-brand span { font-size:6px }
+.v2 .signal-hero .sample h3 { font-size:37px;margin:30px 0 19px }
+.v2 .signal-hero .sample-visual { right:-47px;top:8px }
+.v2 .signal-hero .sample-bottom button { font-size:11px;min-height:44px }
+.v2 .signal-hero .sample-bottom p { font-size:9px }
+.v2 .signal-hero .sample-receipt { font-size:9px;padding:11px }
+.v2 .signal-hero .stage-note { font-size:10px;line-height:1.6;margin:13px 0 0 }
+.v2 .signal-hero .stage-note br { display:none }
+.v2 .signal-hero .stage-note br:after { content:' ' }
+.v2 .signal-hero .booking-surface { min-height:0;padding-top:16px }
+.v2 .signal-hero .booking-surface h3 { font-size:30px;line-height:1.1;margin:18px 0 20px }
+.v2 .signal-hero .schedule-heading { font-size:11px }
+.v2 .signal-hero .days { gap:5px;margin:12px 0 }
+.v2 .signal-hero .days>div { padding:10px 6px }
+.v2 .signal-hero .days b { font-size:20px }
+.v2 .signal-hero .days span { font-size:8px }
+.v2 .signal-hero .times>span { padding:10px 7px;font-size:11px }
+.v2 .signal-hero .booking-receipt { padding-top:12px;margin-top:17px }
+.v2 .signal-hero .booking-receipt strong { font-size:11px }
+.v2 .signal-hero .booking-receipt div>span { font-size:9px }
+.v2 .signal-hero .automation { margin-bottom:21px }
+.v2 .signal-hero .automation-surface { min-height:0;padding:18px 17px 0 }
+.v2 .signal-hero .automation-caption { font-size:8px }
+.v2 .signal-hero .automation-surface h3 { font-size:29px;margin:18px 0 22px }
+.v2 .signal-hero .task-list li { padding-bottom:23px;gap:11px }
+.v2 .signal-hero .task-list strong { font-size:11px }
+.v2 .signal-hero .task-list div>span { font-size:9px;line-height:1.5 }
+.v2 .signal-hero .task-icon { font-size:8px }
+.v2 .signal-hero .automation-receipt { margin:0 -17px;padding:13px;font-size:9px }
+.v2 .signal-hero .bench-footer { flex-direction:column;align-items:start;padding:18px 0 22px;gap:10px;margin-top:0 }
+.v2 .signal-hero .bench-footer>span:nth-child(2) { font-size:9px;line-height:1.5;max-width:270px }
+.v2 .signal-hero .footer-code { display:none }
+.v2 .signal-hero .signature { padding:23px 22px;flex-wrap:wrap;gap:20px }
+.v2 .signal-hero .signature>span { font-size:7px }
+.v2 .signal-hero .signature p { font-size:19px }
+.v2 .signal-hero .signature>a { font-size:10px }
+.v2 .signal-hero .workbench[data-flow='booking'] .signal-progress { transform:scaleY(var(--booking-progress,.34)) }
+.v2 .signal-hero .workbench[data-flow='booking'] .traveller { left:-3px;top:calc(var(--booking-progress,.34)*100%) }
+.v2 .signal-hero .workbench[data-flow='automation'] .signal-progress { transform:scaleY(var(--automation-progress,.68)) }
+.v2 .signal-hero .workbench[data-flow='automation'] .traveller { left:-3px;top:calc(var(--automation-progress,.68)*100%) }
+.v2 .signal-hero .workbench[data-flow='complete'] .signal-progress { transform:scaleY(1) }
+.v2 .signal-hero .workbench[data-flow='complete'] .traveller { left:-3px;top:100% }
+}
+@media(prefers-reduced-motion:reduce) {
+.v2 .signal-hero *:before,
+.v2 .signal-hero *:after { animation:none!important;transition:none!important }
+}
+.v2 .signal-hero .window-bar { font-size:9px }
+.v2 .signal-hero .sample-brand span { font-size:8px }
+.v2 .signal-hero .sample-bottom p { font-size:11px }
+.v2 .signal-hero .sample-bottom button { font-size:12px }
+.v2 .signal-hero .sample-receipt { font-size:11px }
+.v2 .signal-hero .booking-intro { font-size:10px }
+.v2 .signal-hero .schedule-heading { font-size:12px }
+.v2 .signal-hero .days span { font-size:9px }
+.v2 .signal-hero .booking-receipt strong { font-size:12px }
+.v2 .signal-hero .booking-receipt div>span { font-size:11px }
+.v2 .signal-hero .automation-caption { font-size:9px }
+.v2 .signal-hero .task-list strong { font-size:13px }
+.v2 .signal-hero .task-list div>span { font-size:11px }
+.v2 .signal-hero .automation-receipt { font-size:10px }
+.v2 .signal-hero .stage-note { font-size:12px }
+.v2 .signal-hero .bench-name div>span { font-size:9px }
+.v2 .signal-hero .bench-footer>span:nth-child(2) { font-size:11px }
+@media(max-width:1100px) and (min-width:801px) {
+.v2 .signal-hero .sample-bottom p { max-width:80px }
+.v2 .signal-hero .type { display:none }
+.v2 .signal-hero .task-list strong { font-size:12px }
+.v2 .signal-hero .task-list div>span { font-size:10px }
+}
+@media(max-width:600px) {
+.v2 .signal-hero .stage { margin-bottom:25px }
+.v2 .signal-hero .stage-note { display:none }
+.v2 .signal-hero .window-bar { font-size:8px }
+.v2 .signal-hero .sample { height:195px }
+.v2 .signal-hero .sample-brand { font-size:13px }
+.v2 .signal-hero .sample-brand span { display:none }
+.v2 .signal-hero .sample h3 { font-size:32px;margin:23px 0 8px }
+.v2 .signal-hero .sample-visual { top:0;right:-58px;transform:rotate(-18deg) scale(.85) }
+.v2 .signal-hero .sample-bottom { justify-content:end }
+.v2 .signal-hero .sample-bottom p { display:none }
+.v2 .signal-hero .sample-bottom button { font-size:12px;padding:10px 0 }
+.v2 .signal-hero .sample-receipt { font-size:10px }
+.v2 .signal-hero .booking-surface h3 { font-size:25px;margin:13px 0 16px;max-width:250px }
+.v2 .signal-hero .booking-surface h3 br { display:none }
+.v2 .signal-hero .booking-intro { font-size:9px }
+.v2 .signal-hero .schedule-heading { font-size:11px }
+.v2 .signal-hero .days { margin:10px 0 }
+.v2 .signal-hero .days>div { padding:8px 4px;gap:5px }
+.v2 .signal-hero .times>span { padding:9px 5px }
+.v2 .signal-hero .booking-receipt { margin-top:14px;padding-top:12px }
+.v2 .signal-hero .booking-receipt strong { font-size:11px }
+.v2 .signal-hero .booking-receipt div>span { font-size:10px }
+.v2 .signal-hero .automation-caption { font-size:8px }
+.v2 .signal-hero .automation-surface h3 { font-size:25px;margin:14px 0 19px }
+.v2 .signal-hero .automation-surface h3 br { display:none }
+.v2 .signal-hero .task-list li { padding-bottom:18px }
+.v2 .signal-hero .task-list strong { font-size:12px }
+.v2 .signal-hero .task-list div>span { font-size:10px }
+.v2 .signal-hero .automation-receipt { font-size:9px }
+.v2 .signal-hero .bench-name div>span { display:none }
+.v2 .signal-hero .bench-name { font-size:10px }
+.v2 .signal-hero .bench-footer>span:nth-child(2) { font-size:10px }
+.v2 .signal-hero .signal-track { bottom:29px }
+}
+/* Shared navigation appearance; retain the existing IDs, breakpoint, drawer and focus handling. */
+.v2 .site-header.signal-header { background:#F3F0E8; border-color:#c9cbc6; color:#0B0D10; backdrop-filter:none; }
+.v2 .site-header.signal-header>div:first-child { max-width:1600px; padding-inline:clamp(22px,4.44vw,64px); }
+.v2 .signal-header .signal-home { flex:none; display:flex; align-items:center; }
+.v2 .signal-header img.signal-wordmark { width:185px; height:auto; filter:none; }
+.v2 .signal-header nav[aria-label='Main Navigation'] a { color:#4b555c; }
+.v2 .signal-header nav[aria-label='Main Navigation'] a:hover { color:#0B0D10; background:#e4e5df; }
+.v2 .signal-header .bg-primary-container { color:#F3F0E8; background:#0B0D10; border-color:#0B0D10; box-shadow:none; }
+.v2 .signal-header .bg-primary-container:hover { background:#192127; }
+.v2 .signal-header .bg-primary-container svg { color:#FF5C40; }
+.v2 .signal-header #mobile-menu-btn { color:#0B0D10; border-color:#65737b; background:transparent; }
+.v2 .signal-header :focus-visible { outline:2px solid #0B0D10; outline-offset:4px; box-shadow:none; }
+.v2 .signal-header #mobile-nav-drawer { color:#0B0D10; background:#F3F0E8; border-color:#c9cbc6; }
+.v2 .signal-header #mobile-nav-drawer .text-primary-container { color:#a02a18; }
+.v2 .signal-header #mobile-nav-drawer .text-secondary { color:#4b555c; }
+.v2 .signal-header #mobile-nav-drawer .border-outline-variant { border-color:#c9cbc6; }
+.v2 .signal-header #mobile-nav-drawer .mobile-nav-link { color:#0B0D10; border-color:#c9cbc6; }
+.v2 .signal-header #mobile-nav-drawer .mobile-nav-link:hover { background:#e4e5df; }
+.v2 .signal-header #mobile-nav-drawer .mobile-nav-link.bg-primary-container { background:#0B0D10; color:#F3F0E8; }
+.v2 .signal-header .bg-primary-container:focus-visible { outline-offset:4px; }
+@media(max-width:600px){.v2 .signal-header img.signal-wordmark{width:158px;}}
+
+/* On tablet the third scene wraps; a routed connector preserves the continuous story. */
+.v2 .signal-hero .tablet-connection { display:none; }
+@media(min-width:601px) and (max-width:800px) {
+ .v2 .signal-hero .automation { padding-top:25px; }
+ .v2 .signal-hero .automation .index { display:grid; top:-44px; }
+ .v2 .signal-hero .tablet-connection { display:block; position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+ .v2 .signal-hero .tablet-connection path { fill:none; stroke:#65717a; stroke-width:1; }
+ .v2 .signal-hero .tablet-connection .tablet-progress { stroke:#FF5C40; stroke-width:2; stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset 1s ease; }
+ .v2 .signal-hero .workbench[data-flow='automation'] .tablet-progress,
+ .v2 .signal-hero .workbench[data-flow='complete'] .tablet-progress { stroke-dashoffset:0; }
+}
+@media(prefers-reduced-motion:reduce) { .v2 .signal-hero .tablet-connection .tablet-progress { transition:none; } }

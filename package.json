@@ -1,0 +1,62 @@
+{
+  "name": "aevumstack",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.mjs",
+    "dev:api": "node --env-file-if-exists=.env --import tsx backend/src/server.ts",
+    "start": "vite --config vite.config.mjs",
+    "build": "vite build --config vite.config.mjs && node scripts/finalize-build.mjs && npm run build:backend",
+    "build:backend": "tsc -p backend/tsconfig.json",
+    "typecheck:backend": "tsc --noEmit -p backend/tsconfig.json",
+    "db:migrate": "node --env-file-if-exists=.env --import tsx backend/src/db/migrate.ts",
+    "preview": "vite preview --config vite.config.mjs",
+    "test": "npm run build && node .test-qa.js && node --test tests/contact-csp.test.mjs && node scripts/check-site.mjs && npm run typecheck:backend && npm run test:backend",
+    "test:backend": "vitest run --config backend/vitest.config.ts",
+    "test:e2e": "npm run build && npm run test:parity --",
+    "test:links": "node scripts/check-site.mjs",
+    "audit:security": "npm audit --audit-level=low",
+    "test:security": "node scripts/security-check.mjs",
+    "typecheck": "tsc --noEmit && npm run typecheck:backend",
+    "dev:worker": "node --env-file-if-exists=.env --import tsx backend/src/worker.ts",
+    "test:backend:native": "PHASE3_REQUIRE_NATIVE=1 vitest run --config backend/vitest.config.ts backend/tests/native.test.ts",
+    "test:integration": "playwright test --config playwright.config.ts",
+    "local:up": "node --env-file-if-exists=.env.local-runtime scripts/local-runtime.mjs up",
+    "local:host": "node --env-file-if-exists=.env.local-runtime scripts/local-runtime.mjs up --host",
+    "local:down": "node --env-file-if-exists=.env.local-runtime scripts/local-runtime.mjs down",
+    "local:status": "node --env-file-if-exists=.env.local-runtime scripts/local-runtime.mjs status",
+    "db:backup": "node --env-file-if-exists=.env.local-runtime scripts/local-db.mjs backup",
+    "db:restore": "node --env-file-if-exists=.env.local-runtime scripts/local-db.mjs restore",
+    "db:verify": "node --env-file-if-exists=.env.local-runtime scripts/local-db.mjs verify",
+    "test:local-runtime": "npm run build && playwright test --config playwright.local.config.ts",
+    "test:parity": "playwright test --config playwright.parity.config.ts"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.15",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.6",
+    "@types/pg": "8.23.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": "26.x"
+  },
+  "dependencies": {
+    "fastify": "5.12.8",
+    "node-pg-migrate": "9.0.0",
+    "nodemailer": "10.3.1",
+    "pg": "8.23.1",
+    "zod": "4.6.7"
+  },
+  "overrides": {
+    "node-pg-migrate": {
+      "glob": "14.0.2"
+    },
+    "glob": {
+      "minimatch": "11.0.4"
+    }
+  }
+}

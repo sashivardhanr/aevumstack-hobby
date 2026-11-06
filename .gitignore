@@ -1,0 +1,14 @@
+node_modules
+dist/
+/backend/dist/
+.astro/
+.tools/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# New QA output; existing tracked Phase 1/2 artifacts are preserved.
+artifacts/
+.npm-cache/
+/backups/

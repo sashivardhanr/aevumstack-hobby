@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AEVUM STACK | Digital Growth Systems &amp; Web Engineering</title><meta name="description" content="Websites, booking systems and business automation for small businesses, clinics and consultants. Compare fixed-price packages and try the studio booking demo."><link rel="canonical" href="https://aevumstack.dev/"><!-- Favicon & Brand Icons --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/favicon.png"><!-- Open Graph Metadata --><meta property="og:type" content="website"><meta property="og:url" content="https://aevumstack.dev/"><meta property="og:title" content="AEVUM STACK | Digital Growth Systems &amp; Web Engineering"><meta property="og:description" content="Websites, booking systems and business automation for small businesses, clinics and consultants. Compare fixed-price packages and try the studio booking demo."><meta property="og:image" content="https://aevumstack.dev/images/signal-social.png"><meta property="og:site_name" content="AEVUM STACK"><!-- Twitter Card Metadata --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://aevumstack.dev/"><meta name="twitter:title" content="AEVUM STACK | Digital Growth Systems &amp; Web Engineering"><meta name="twitter:description" content="Websites, booking systems and business automation for small businesses, clinics and consultants. Compare fixed-price packages and try the studio booking demo."><meta name="twitter:image" content="https://aevumstack.dev/images/signal-social.png"><!-- Typography: Space Grotesk & Inter --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles/home.css"><link rel="stylesheet" href="/styles/global.css"><link rel="stylesheet" href="/src/v2.css"><link rel="stylesheet" href="/src/signal.css"><link rel="stylesheet" href="/src/signal-site.css"></head>
+<body id="top" class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white v2 signal-site">
+<!-- Accessible skip link for keyboard users --><a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-container focus:text-white focus:font-label-ui focus:rounded focus:outline-none focus:ring-2 focus:ring-white">
+Skip to main content
+</a>  <header class="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-outline-variant transition-all site-header signal-header">
+<div class="h-20 max-w-[1400px] mx-auto px-4 md:px-8 flex items-center justify-between">
+<!-- Approved AEVUM / SIGNAL identity; menu behavior is unchanged. -->
+<a class="signal-home" href="#top" aria-label="AEVUM STACK Home"><img class="signal-wordmark" src="/src/assets/signal-wordmark.svg" alt="AEVUM STACK" width="185" height="42" loading="eager"></a>
+<!-- Desktop Nav Links -->
+<nav class="hidden xl:flex items-center gap-1 text-sm font-label-ui" aria-label="Main Navigation">
+<a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#top"> Home </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#selected-work"> Work </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#services"> Services </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#packages"> Packages </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#support-plans"> Support Plans </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#how-it-works"> How It Works </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#faq"> FAQ </a><a class="px-3.5 py-2 text-secondary hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" href="#contact"> Contact </a>
+</nav>
+<!-- Nav CTA & Mobile Menu Toggle -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded hover:bg-inverse-primary transition-all active:scale-[0.98] border border-primary-container shadow-sm hover:shadow-primary-container/20" href="#contact">
+<span>Start a Project</span>
+<svg class="shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="M4 12h15m-6-6 6 6-6 6"></path>
+</svg>
+</a>
+<!-- Functional Mobile Navigation Trigger -->
+<button id="mobile-menu-btn" type="button" class="xl:hidden p-2.5 text-secondary hover:text-white rounded bg-surface-container border border-outline-variant hover:border-outline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Toggle navigation menu">
+<svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+<svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m6 6 12 12M18 6 6 18"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Accessible Mobile Navigation Drawer -->
+<div id="mobile-nav-drawer" class="fixed inset-x-0 top-20 bottom-0 bg-[#050505]/98 backdrop-blur-xl border-b border-outline-variant flex flex-col justify-between p-6 overflow-y-auto transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out xl:hidden z-40" role="dialog" aria-modal="true" aria-label="Mobile Navigation" aria-hidden="true" inert="">
+<div class="space-y-6">
+<div class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold border-b border-outline-variant pb-2">
+// SITE NAVIGATION
+</div>
+<nav class="flex flex-col gap-2" aria-label="Mobile Links">
+<a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#top">
+<span>Home</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#selected-work">
+<span>Work</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#services">
+<span>Services</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#packages">
+<span>Packages</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#support-plans">
+<span>Support Plans</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#how-it-works">
+<span>How It Works</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#faq">
+<span>FAQ</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a><a class="mobile-nav-link text-base font-headline-sm uppercase text-secondary hover:text-white py-3 px-3 rounded hover:bg-surface-container transition-colors flex items-center justify-between border-b border-outline-variant/30" href="#contact">
+<span>Contact</span>
+<svg class="shrink-0 text-primary-container" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a>
+</nav>
+</div>
+<div class="pt-6 border-t border-outline-variant space-y-4">
+<a class="mobile-nav-link w-full py-3.5 px-6 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded text-center hover:bg-inverse-primary transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary-container/20" href="#contact">
+<span>Start a Project</span>
+<svg class="shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="M4 12h15m-6-6 6 6-6 6"></path>
+</svg>
+</a>
+<div class="text-center font-label-mono text-[11px] text-secondary">
+AEVUM STACK • aevumstack.dev
+</div>
+</div>
+</div>
+</header>
+<main id="main-content" tabindex="-1" class="w-full pt-20">
+<section class="signal-hero" aria-labelledby="signal-headline">
+<div class="editorial"><div class="edition"><span><b aria-hidden="true"></b> AEVUM / SIGNAL</span><span>DESIGN WITH DIRECTION.</span></div>
+<div class="hero-heading"><h1 id="signal-headline">First impressions.<br><span>Next moves<span class="signal-stop">.</span></span></h1><div class="intent"><p>We build <strong>websites, booking experiences and business automation.</strong> Each part considered. Everything connected.</p><a class="primary" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a></div></div>
+<div class="lead-out"><span class="lead-rule" aria-hidden="true"></span><p>A good website is the beginning.<br><strong>Here’s what can happen next.</strong></p><svg class="sweep" viewBox="0 0 280 90" aria-hidden="true"><path d="M0 12h160q70 0 70 62v10"/><path class="sweep-head" d="m219 72 11 12 11-12"/></svg><span class="prototype-label">WEBSITES / BOOKINGS<br>BUSINESS AUTOMATION</span></div>
+</div>
+<div class="workbench" id="signal-workbench" data-stage="idle">
+<div class="bench-top"><div class="bench-name"><span class="bench-mark" aria-hidden="true">↳</span><div>THE CONNECTED EXPERIENCE<span>ONE SIGNAL. THREE PURPOSEFUL STEPS.</span></div></div><button type="button" id="signal-run" hidden><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 2 9 6-9 6z" fill="currentColor"/></svg><span id="signal-run-label">Run the signal</span></button></div>
+<div class="journey"><svg class="tablet-connection" aria-hidden="true"><path class="tablet-rail"></path><path class="tablet-progress" pathLength="1"></path></svg><div class="signal-track" aria-hidden="true"><div class="signal-progress"></div><div class="traveller"></div></div>
+<article class="stage website" data-step="1" aria-labelledby="website-title"><div class="stage-heading"><span class="index">01</span><h2 id="website-title">The first click</h2><span class="type">WEBSITE</span></div>
+<div class="website-window"><div class="window-bar"><span class="window-dot" aria-hidden="true"></span><span>FIELDWORK / FICTIONAL STUDIO</span><span aria-hidden="true">↗</span></div><div class="sample"><div class="sample-brand">FIELDWORK<span>SPACES FOR PEOPLE</span></div><div class="sample-visual" aria-hidden="true"><div class="shape shape-one"></div><div class="shape shape-two"></div><div class="shape shape-three"></div><span>F / 01</span></div><h3>Good spaces.<br>Better days.</h3><div class="sample-bottom"><p>A studio website.<br>A new conversation.</p><button id="signal-sample-start" type="button" hidden>Find a time <span aria-hidden="true">↗</span></button><span class="nojs-action">Find a time ↗</span></div></div><div class="sample-receipt"><span class="state-square" aria-hidden="true"></span><span id="signal-website-state">Give curiosity somewhere to go.</span></div></div>
+<p class="stage-note">A clear identity.<br> An invitation to take the next step.</p></article>
+<article class="stage booking" data-step="2" aria-labelledby="booking-title"><div class="stage-heading"><span class="index">02</span><h2 id="booking-title">A time to connect</h2><span class="type">BOOKING</span></div><div class="booking-surface"><div class="booking-intro"><span class="overline">DISCOVERY SESSION</span><span class="duration">30 MIN</span></div><h3>Make room for<br> something good.</h3><div class="schedule"><div class="schedule-heading"><span>A sample week</span><span aria-hidden="true">← &nbsp; →</span></div><div class="days"><div><span>MON</span><b>12</b></div><div><span>TUE</span><b>13</b></div><div class="picked"><span>WED</span><b>14</b></div><div><span>THU</span><b>15</b></div><div><span>FRI</span><b>16</b></div></div><div class="times" aria-label="Illustrative available times"><span>10:00</span><span class="chosen">11:30 <span aria-hidden="true">↗</span></span><span>14:00</span></div></div><div class="booking-receipt"><span class="receipt-symbol" aria-hidden="true">↳</span><div><strong id="signal-booking-state">A clear next step.</strong><span id="signal-booking-detail">Fictional slots. No real reservation.</span></div></div></div><p class="stage-note">A simpler way to book.<br> Less back-and-forth.</p></article>
+<article class="stage automation" data-step="3" aria-labelledby="automation-title"><div class="stage-heading"><span class="index">03</span><h2 id="automation-title">The follow-through</h2><span class="type">AUTOMATION</span></div><div class="automation-surface"><div class="automation-caption"><img src="/src/assets/signal-mark.svg" alt="" width="35" height="35"><span>THOUGHTFUL SYSTEMS.<br>QUIETLY AT WORK.</span></div><h3>Keep the<br> good work going.</h3><ol class="task-list"><li data-task="1"><span class="task-icon" aria-hidden="true">01</span><div><strong>Capture the booking</strong><span>Keep the details together.</span></div><span class="task-check" aria-hidden="true">✓</span></li><li data-task="2"><span class="task-icon" aria-hidden="true">02</span><div><strong>Notify the team</strong><span>Put everyone in the picture.</span></div><span class="task-check" aria-hidden="true">✓</span></li><li data-task="3"><span class="task-icon" aria-hidden="true">03</span><div><strong>Prepare the follow-up</strong><span>Make the next move easier.</span></div><span class="task-check" aria-hidden="true">✓</span></li></ol><div class="automation-receipt"><span class="state-square" aria-hidden="true"></span><span id="signal-automation-state">Waiting for the signal</span></div></div><p class="stage-note">Practical automation.<br> Built around the way you work.</p></article>
+</div><div class="bench-footer"><span id="signal-visual-status">EXPLORE THE JOURNEY</span><span>Illustrative sequence only. No bookings, emails or data are sent.</span><span class="footer-code">AE / S—01</span></div></div>
+<div class="signature"><span>DESIGN IS HOW IT LOOKS.<br>ENGINEERING IS HOW IT WORKS.</span><p>We think about <em>both.</em></p><a href="#selected-work">Explore our work <span aria-hidden="true">↗</span></a></div>
+<p id="signal-sequence-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">This is a simulated journey. Nothing is booked or sent.</p>
+</section>
+<section class="selected-work border-b border-outline-variant" id="selected-work" aria-labelledby="work-title" data-astro-cid-xbkx7tay="">
+<div class="work-shell" data-astro-cid-xbkx7tay="">
+<div class="motion-work-intro work-heading" data-astro-cid-xbkx7tay="">
+<p class="work-label" data-astro-cid-xbkx7tay=""><span data-astro-cid-xbkx7tay="">01</span> / Studio portfolio</p>
+<h2 id="work-title" data-astro-cid-xbkx7tay="">Our own work.<br><em>Out in the open.</em></h2>    </div><article class="project-study signal-case"><div class="project-visual"><div class="project-toolbar"><span>AEVUM STACK / STUDIO BUILD</span><span>01 — V1</span></div><img src="/images/studio-v1.png" alt="The AEVUM STACK V1 homepage, showing its chronograph and responsive website presentation" width="1200" height="740" loading="lazy" decoding="async"><div class="project-tags"><span>WEB DESIGN</span><span>DEVELOPMENT</span><span>ENQUIRY SYSTEM</span></div></div><div class="project-caption"><p class="case-eyebrow">STUDIO PROJECT / 001</p><div class="project-description"><h3 class="work-kind" data-astro-cid-xbkx7tay="">AEVUM STACK <span data-astro-cid-xbkx7tay="">Self-initiated studio website</span></h3><p class="work-copy" data-astro-cid-xbkx7tay="">Our own website brings fixed-price offers and project intake into one responsive experience.</p><a href="#booking-demo" data-astro-cid-xbkx7tay="">Try the booking demo <span aria-hidden="true" data-astro-cid-xbkx7tay="">↓</span></a></div><dl class="case-facts"><div><dt>Project type</dt><dd>Self-initiated studio build</dd></div><div><dt>What it brings together</dt><dd>Published offers, a booking demonstration and an enquiry journey.</dd></div><div><dt>The reference</dt><dd>Original V1 website, shown here as a design archive.</dd></div></dl><span class="project-index">NO CLIENT CLAIMS. THE WORK SPEAKS.</span></div></article>
+<div class="engineering-strip"><div><span>BEHIND THE INTERFACE</span><h3>Built to connect<br>the right things.</h3><p>A local-first application with separate responsibilities for the interface, enquiry records and notifications.</p></div><ol aria-label="Current local application architecture"><li><span>01 / EXPERIENCE</span><strong>Vite + TypeScript</strong><p>Responsive pages and browser interactions.</p></li><li><span>02 / INTAKE</span><strong>Fastify → PostgreSQL</strong><p>Validated enquiries, durably recorded.</p></li><li><span>03 / NOTIFICATION</span><strong>Outbox → Mailpit</strong><p>Separate local notification processing.</p></li></ol></div>
+<div class="work-flow motion-card project-process" data-astro-cid-xbkx7tay="">
+<p class="work-label" data-astro-cid-xbkx7tay="">Build walkthrough <span data-astro-cid-xbkx7tay=""> / 01–03</span></p>
+<ol data-astro-cid-xbkx7tay="">
+<li data-astro-cid-xbkx7tay=""><span aria-hidden="true" data-astro-cid-xbkx7tay="">01</span><div data-astro-cid-xbkx7tay=""><strong data-astro-cid-xbkx7tay="">Compare</strong><p data-astro-cid-xbkx7tay="">Website packages and monthly support plans have published prices and scope.</p></div></li>
+<li data-astro-cid-xbkx7tay=""><span aria-hidden="true" data-astro-cid-xbkx7tay="">02</span><div data-astro-cid-xbkx7tay=""><strong data-astro-cid-xbkx7tay="">Select</strong><p data-astro-cid-xbkx7tay="">A package link fills in the enquiry form, with the selection carried in the URL.</p></div></li>
+<li data-astro-cid-xbkx7tay=""><span aria-hidden="true" data-astro-cid-xbkx7tay="">03</span><div data-astro-cid-xbkx7tay=""><strong data-astro-cid-xbkx7tay="">Review</strong><p data-astro-cid-xbkx7tay="">The form checks the brief and explains what to do when an enquiry cannot be submitted.</p></div></li>
+</ol>
+<a href="#packages" data-astro-cid-xbkx7tay="">Explore the package flow <span aria-hidden="true" data-astro-cid-xbkx7tay="">→</span></a>
+</div>
+<div class="work-demo demo-feature" data-astro-cid-xbkx7tay=""><section id="booking-demo" class="booking-demo" aria-labelledby="booking-demo-title" data-booking-demo="" data-astro-cid-q733eshu="">
+<header class="demo-header" data-astro-cid-q733eshu="">
+<p class="demo-kicker" data-astro-cid-q733eshu="">02 / INTERACTIVE BOOKING DESK</p>
+<h3 id="booking-demo-title" data-astro-cid-q733eshu="">A little less admin.<br>A clear <em>next step.</em></h3>
+<p class="demo-copy" data-astro-cid-q733eshu="">Try a fictional appointment flow and watch it appear in the sample operator queue.</p>
+<p class="demo-badge" data-astro-cid-q733eshu=""><span aria-hidden="true" data-astro-cid-q733eshu=""></span> Interactive Demo — No Real Booking</p>
+</header>
+<div class="demo-grid" data-astro-cid-q733eshu="">
+<div class="demo-panel" data-astro-cid-q733eshu="">
+<p class="demo-kicker" data-astro-cid-q733eshu="">01 / Visitor view</p>
+<p class="demo-note" data-astro-cid-q733eshu="">Fictional services and times · IST (UTC+05:30)</p>
+<p class="demo-note" data-demo-fallback="" data-astro-cid-q733eshu="">Sample flow: choose a service, pick a slot, and confirm to add it to the operator queue. Enable JavaScript to try the simulation.</p>
+<div data-demo-controls="" hidden="" data-astro-cid-q733eshu="">
+<fieldset data-astro-cid-q733eshu="">
+<legend data-astro-cid-q733eshu="">Choose a sample service</legend>
+<div class="demo-options" data-astro-cid-q733eshu="">
+<label class="demo-option" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-service" autocomplete="off" value="intro" data-label="Intro consultation" data-duration="20 min" checked="" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu=""><strong data-astro-cid-q733eshu="">Intro consultation</strong><small data-astro-cid-q733eshu="">20 min</small></span>
+</label><label class="demo-option" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-service" autocomplete="off" value="planning" data-label="Planning session" data-duration="45 min" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu=""><strong data-astro-cid-q733eshu="">Planning session</strong><small data-astro-cid-q733eshu="">45 min</small></span>
+</label>
+</div>
+</fieldset>
+<fieldset data-astro-cid-q733eshu="">
+<legend data-astro-cid-q733eshu="">Choose an available sample slot</legend>
+<div class="demo-days" data-astro-cid-q733eshu="">
+<div data-astro-cid-q733eshu="">
+<p class="demo-note" data-astro-cid-q733eshu="">Tue, 18 May 2027</p>
+<div class="demo-options" data-astro-cid-q733eshu="">
+<label class="demo-option demo-time" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-slot" autocomplete="off" value="Tue, 18 May 2027, 09:00" aria-label="Tue, 18 May 2027 at 09:00 IST" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu="">09:00</span>
+</label><label class="demo-option demo-time" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-slot" autocomplete="off" value="Tue, 18 May 2027, 11:30" aria-label="Tue, 18 May 2027 at 11:30 IST" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu="">11:30</span>
+</label>
+</div>
+</div><div data-astro-cid-q733eshu="">
+<p class="demo-note" data-astro-cid-q733eshu="">Wed, 19 May 2027</p>
+<div class="demo-options" data-astro-cid-q733eshu="">
+<label class="demo-option demo-time" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-slot" autocomplete="off" value="Wed, 19 May 2027, 10:00" aria-label="Wed, 19 May 2027 at 10:00 IST" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu="">10:00</span>
+</label><label class="demo-option demo-time" data-astro-cid-q733eshu="">
+<input type="radio" name="demo-slot" autocomplete="off" value="Wed, 19 May 2027, 14:30" aria-label="Wed, 19 May 2027 at 14:30 IST" data-astro-cid-q733eshu="">
+<span data-astro-cid-q733eshu="">14:30</span>
+</label>
+</div>
+</div>
+</div>
+</fieldset>
+<div class="demo-actions" data-astro-cid-q733eshu="">
+<button type="button" class="demo-primary motion-press" data-demo-confirm="" disabled="" data-astro-cid-q733eshu="">Simulate booking <span aria-hidden="true" data-astro-cid-q733eshu="">→</span></button>
+<button type="button" class="demo-secondary motion-press" data-demo-reset="" data-astro-cid-q733eshu="">Reset</button>
+</div>
+<p class="demo-status" role="status" data-demo-status="" data-astro-cid-q733eshu=""></p>
+</div>
+</div>
+<div class="demo-panel demo-operator" data-astro-cid-q733eshu="">
+<p class="demo-kicker" data-astro-cid-q733eshu="">02 / Operator view</p>
+<h4 data-astro-cid-q733eshu="">Appointment queue</h4>
+<p class="demo-note" data-astro-cid-q733eshu="">Sample dashboard · Session only</p>
+<div class="demo-queue" data-astro-cid-q733eshu="">
+<p class="demo-empty demo-note" data-demo-empty="" data-astro-cid-q733eshu="">Queue empty. Confirm a sample slot to create an appointment here.</p>
+<div class="motion-state" data-demo-entry="" hidden="" data-astro-cid-q733eshu="">
+<div class="demo-entry-top" data-astro-cid-q733eshu=""><strong data-demo-service="" data-astro-cid-q733eshu=""></strong><span data-demo-state="" data-astro-cid-q733eshu="">Scheduled</span></div>
+<p class="demo-note" data-demo-slot="" data-astro-cid-q733eshu=""></p>
+<p class="demo-note" data-demo-duration="" data-astro-cid-q733eshu=""></p>
+<button type="button" class="demo-secondary motion-press" data-demo-check-in="" data-astro-cid-q733eshu="">Mark checked in</button>
+</div>
+</div>
+</div>
+</div>
+</section></div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-low v2-section" id="services">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-7 md:mb-10 gap-4 section-heading">
+<div>
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest block mb-2 font-semibold">
+01 // ESSENTIAL DIGITAL SYSTEMS
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight">The right tools.<br>Working together.</h2>
+</div>
+<p class="font-body-md text-secondary max-w-lg leading-relaxed">
+Practical digital infrastructure engineered for small businesses, local services, clinics, consultants, coaches, and growing startups.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 section-content">
+<div class="bg-surface-container p-4 sm:p-6 rounded border border-outline-variant motion-card flex flex-col justify-between group service-row"><span class="service-number" aria-hidden="true">01</span>
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 4h18v13H3zM8 21h8M12 17v4"></path></svg>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5"> Professional Websites </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4"> Responsive websites that explain your services and give visitors a clear way to enquire. </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>CORE ASSET</span>
+<span class="text-on-surface font-semibold">RESPONSIVE DESIGN</span>
+</div>
+</div><div class="bg-surface-container p-4 sm:p-6 rounded border border-outline-variant motion-card flex flex-col justify-between group service-row"><span class="service-number" aria-hidden="true">02</span>
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5"> Customer Enquiry Generation </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4"> Enquiry forms, WhatsApp links and clear calls to action that give visitors a choice of contact channels. </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>LEAD FLOW</span>
+<span class="text-on-surface font-semibold">WHATSAPP READY</span>
+</div>
+</div><div class="bg-surface-container p-4 sm:p-6 rounded border border-outline-variant motion-card flex flex-col justify-between group service-row"><span class="service-number" aria-hidden="true">03</span>
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5"> Online Booking &amp; Scheduling </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4"> Appointment and consultation booking flows with calendar and communication integrations scoped to your needs. </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>EFFICIENCY</span>
+<span class="text-on-surface font-semibold">CALENDAR INTEGRATION</span>
+</div>
+</div><div class="bg-surface-container p-4 sm:p-6 rounded border border-outline-variant motion-card flex flex-col justify-between group service-row"><span class="service-number" aria-hidden="true">04</span>
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-container mb-5 group-hover:border-primary-container transition-colors">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2.5"> Business Automation </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed mb-4"> Email responses, WhatsApp workflows and CRM integrations designed around your team’s repeatable tasks. </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary uppercase flex items-center justify-between">
+<span>PRODUCTIVITY</span>
+<span class="text-on-surface font-semibold">WORKFLOW INTEGRATION</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-lowest v2-section" id="packages">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="text-center max-w-3xl mx-auto mb-8 md:mb-12 section-heading">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+02 // FIXED TRANSPARENT PACKAGES
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-on-surface tracking-tight mb-4">Clear scope.<br>A solid start.</h2>
+<p class="font-body-lg text-secondary text-base sm:text-lg">
+Straightforward pricing tailored for Indian small businesses, consultants, clinics, and startups. Pick the tier that matches your stage.
+</p>
+</div>
+<!-- 4 Ascending Package Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-6 items-stretch mb-6 md:mb-10 section-content">
+<div class="rounded p-4 sm:p-6 flex flex-col justify-between motion-card bg-surface-container-low border border-outline-variant package-tier">
+<div>  <div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 rounded font-semibold bg-surface-container-high text-secondary"> PACKAGE 01 </span>
+<span class="font-label-mono text-[11px] text-secondary"> FAST START </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface"> Starter </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Ideal for single-service professionals and initial online presence. </p>
+<div>
+<span class="font-display-hero text-3xl font-bold text-on-surface"> ₹4,999 </span>
+<span class="font-label-mono text-xs text-secondary block mt-1"> ONE-TIME INVESTMENT </span>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Starter</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>  <ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">Single Page Website</li><li data-astro-cid-jocptvim="">Mobile Responsive</li><li data-astro-cid-jocptvim="">WhatsApp Button</li><li data-astro-cid-jocptvim="">Contact Form</li><li data-astro-cid-jocptvim="">Google Maps Integration</li><li data-astro-cid-jocptvim="">Basic SEO Setup</li><li data-astro-cid-jocptvim="">Social Media Links</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3.5 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-surface-container-high text-on-surface hover:bg-outline hover:text-white" href="?package=starter#contact" data-package-select="starter">
+Select Starter </a>
+</div><div class="rounded p-4 sm:p-6 flex flex-col justify-between motion-card bg-surface-container border-2 border-primary-container package-tier">
+<div>
+<div class="inline-flex mb-2 self-start bg-primary-container text-white px-3 py-0.5 rounded-full font-label-mono text-[10px] font-bold uppercase tracking-widest shadow-md">
+FOR LOCAL BUSINESSES
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 rounded font-semibold bg-primary-container/20 text-primary-container"> PACKAGE 02 </span>
+<span class="font-label-mono text-[11px] text-primary-container font-semibold"> CORE BUSINESS </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-white"> Business </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Complete website solution for local companies, doctors, clinics &amp; consultancies. </p>
+<div>
+<span class="font-display-hero text-3xl font-bold text-white"> ₹9,999 </span>
+<span class="font-label-mono text-xs text-secondary block mt-1"> ONE-TIME INVESTMENT </span>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Business</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>
+<p data-astro-cid-jocptvim="">EVERYTHING IN STARTER, PLUS:</p>
+<ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">Up to 5 Pages Website</li><li data-astro-cid-jocptvim="">Dedicated Service Pages</li><li data-astro-cid-jocptvim="">Gallery Section</li><li data-astro-cid-jocptvim="">Testimonials Section</li><li data-astro-cid-jocptvim="">Lead Forms</li><li data-astro-cid-jocptvim="">Speed Optimization</li><li data-astro-cid-jocptvim="">Google Business Integration</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3.5 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-primary-container text-white hover:bg-inverse-primary shadow-md" href="?package=business#contact" data-package-select="business">
+Select Business </a>
+</div><div class="rounded p-4 sm:p-6 flex flex-col justify-between motion-card bg-surface-container-low border border-outline-variant package-tier">
+<div>  <div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 rounded font-semibold bg-surface-container-high text-secondary"> PACKAGE 03 </span>
+<span class="font-label-mono text-[11px] text-secondary"> LEADS &amp; BOOKING </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface"> Growth </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Designed specifically for proactive client acquisition and direct appointments. </p>
+<div>
+<span class="font-display-hero text-3xl font-bold text-on-surface"> ₹14,999 </span>
+<span class="font-label-mono text-xs text-secondary block mt-1"> ONE-TIME INVESTMENT </span>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Growth</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>
+<p data-astro-cid-jocptvim="">EVERYTHING IN BUSINESS, PLUS:</p>
+<ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">Conversion Focused Design</li><li data-astro-cid-jocptvim="">Lead Capture System</li><li data-astro-cid-jocptvim="">Booking Forms</li><li data-astro-cid-jocptvim="">Analytics Setup</li><li data-astro-cid-jocptvim="">Advanced Local SEO</li><li data-astro-cid-jocptvim="">Dedicated Landing Page</li><li data-astro-cid-jocptvim="">Call-To-Action Strategy</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3.5 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-surface-container-high text-on-surface hover:bg-outline hover:text-white" href="?package=growth#contact" data-package-select="growth">
+Select Growth </a>
+</div><div class="rounded p-4 sm:p-6 flex flex-col justify-between motion-card bg-surface-container-low border border-outline-variant package-tier">
+<div>  <div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase px-2.5 py-1 rounded font-semibold bg-surface-container-high text-secondary"> PACKAGE 04 </span>
+<span class="font-label-mono text-[11px] text-secondary"> CRM &amp; FOLLOW-UP </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface"> Pro </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Complete digital infrastructure with full marketing and follow-up pipelines. </p>
+<div>
+<span class="font-display-hero text-3xl font-bold text-on-surface"> ₹29,999 </span>
+<span class="font-label-mono text-xs text-secondary block mt-1"> ONE-TIME INVESTMENT </span>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Pro</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>
+<p data-astro-cid-jocptvim="">EVERYTHING IN GROWTH, PLUS:</p>
+<ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">CRM Setup</li><li data-astro-cid-jocptvim="">Lead Pipeline Setup</li><li data-astro-cid-jocptvim="">WhatsApp Automation</li><li data-astro-cid-jocptvim="">Email Automation</li><li data-astro-cid-jocptvim="">AI Chat Widget</li><li data-astro-cid-jocptvim="">Automated Follow-Ups</li><li data-astro-cid-jocptvim="">Reporting Dashboard</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3.5 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-surface-container-high text-on-surface hover:bg-outline hover:text-white" href="?package=pro#contact" data-package-select="pro">
+Select Pro </a>
+</div>
+</div>
+<!-- Universal Inclusion Banner -->
+<div class="bg-surface-container border border-outline-variant p-5 rounded flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-start sm:items-center gap-3">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+<p class="font-body-sm text-sm text-on-surface">
+<strong class="text-white font-semibold">All packages include:</strong> Domain and Hosting Setup Assistance, Mobile Responsive Design, Basic Security, and delivery planning.
+<span class="text-secondary block sm:inline mt-1 sm:mt-0">
+(Note: Domain registration and hosting plan fees are billed directly by your registrar/host).
+</span>
+</p>
+</div>
+<a class="shrink-0 text-xs font-label-mono text-primary-container hover:underline uppercase tracking-wider font-semibold flex items-center gap-1" href="#faq">
+<span>Read Package FAQ</span>
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg>
+</a>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-low v2-section" id="support-plans">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="max-w-2xl mb-7 md:mb-10 section-heading">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+03 // ONGOING CARE
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">After launch,<br>keep moving.</h2>
+<p class="font-body-lg text-secondary text-base">
+Reliable ongoing maintenance and continuous growth support without hiring in-house technical staff.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 section-content">
+<div class="bg-surface-container rounded p-4 sm:p-6 flex flex-col justify-between motion-card border border-outline-variant support-tier">
+<div>  <div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase font-semibold text-secondary"> TIER 01 </span>
+<span class="font-label-mono text-[10px] text-secondary"> ESSENTIAL CARE </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface"> Care </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Continuous site health, backups, and small ongoing revisions. </p>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white"> ₹999 </span>
+<span class="font-label-mono text-xs text-secondary"> / month </span>
+</div>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Care support</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>  <ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">Website Updates</li><li data-astro-cid-jocptvim="">Security Monitoring</li><li data-astro-cid-jocptvim="">Regular Backups</li><li data-astro-cid-jocptvim="">Minor Text &amp; Image Changes</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-surface-container-high text-on-surface hover:bg-outline hover:text-white" href="?plan=care#contact" data-plan-select="care">
+Choose Care </a>
+</div><div class="bg-surface-container rounded p-4 sm:p-6 flex flex-col justify-between motion-card border border-outline relative shadow-lg support-tier">
+<div>
+<div class="inline-flex mb-2 self-start bg-surface-container-highest border border-outline px-2.5 py-0.5 rounded text-[10px] font-label-mono text-primary uppercase font-bold tracking-wider">
+RECOMMENDED
+</div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase font-semibold text-primary-container"> TIER 02 </span>
+<span class="font-label-mono text-[10px] text-secondary"> ACTIVE GROWTH </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-white"> Growth </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Search engine visibility optimizations and active conversion tune-ups. </p>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white"> ₹2,999 </span>
+<span class="font-label-mono text-xs text-secondary"> / month </span>
+</div>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Growth support</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>
+<p data-astro-cid-jocptvim="">EVERYTHING IN CARE, PLUS:</p>
+<ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">Ongoing SEO Updates</li><li data-astro-cid-jocptvim="">Monthly Performance Reports</li><li data-astro-cid-jocptvim="">Landing Page Refinements</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-primary-container text-white hover:bg-inverse-primary shadow-md" href="?plan=support-growth#contact" data-plan-select="support-growth">
+Choose Growth </a>
+</div><div class="bg-surface-container rounded p-4 sm:p-6 flex flex-col justify-between motion-card border border-outline-variant support-tier">
+<div>  <div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-mono text-xs uppercase font-semibold text-secondary"> TIER 03 </span>
+<span class="font-label-mono text-[10px] text-secondary"> PIPELINES </span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold uppercase text-on-surface"> Automation </h3>
+<p class="font-body-sm text-sm text-secondary mt-1 mb-3"> Continuous CRM maintenance, webhook checks, and funnel improvements. </p>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-3xl font-bold text-white"> ₹4,999 </span>
+<span class="font-label-mono text-xs text-secondary"> / month </span>
+</div>
+</div>
+<details class="plan-details" data-astro-cid-jocptvim="">
+<summary data-astro-cid-jocptvim="">
+<span data-astro-cid-jocptvim="">What’s included <span class="sr-only" data-astro-cid-jocptvim="">in Automation support</span></span>
+<span class="detail-marker" aria-hidden="true" data-astro-cid-jocptvim=""></span>
+</summary>
+<p data-astro-cid-jocptvim="">EVERYTHING IN GROWTH, PLUS:</p>
+<ul data-astro-cid-jocptvim="">
+<li data-astro-cid-jocptvim="">CRM Maintenance</li><li data-astro-cid-jocptvim="">Automation Monitoring</li><li data-astro-cid-jocptvim="">Workflow &amp; Pipeline Improvements</li>
+</ul>
+</details>
+</div>
+<a class="w-full py-3 px-4 font-label-ui text-xs font-semibold uppercase tracking-wider rounded min-h-11 text-center motion-press flex items-center justify-center mt-2 bg-surface-container-high text-on-surface hover:bg-outline hover:text-white" href="?plan=automation#contact" data-plan-select="automation">
+Choose Automation </a>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-lowest v2-section" id="how-it-works">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="mb-14 section-heading">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+04 // SIMPLE WORKFLOW
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">A clear process.<br>From hello to handover.</h2>
+<p class="font-body-lg text-secondary text-base max-w-2xl">
+A linear, distraction-free roadmap designed to get your business website live quickly without technical headaches.
+</p>
+</div>
+<div class="motion-process grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 section-content">
+<div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between motion-card process-step">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="motion-step-number inline-block font-display-hero text-3xl font-bold text-primary-container"> 01 </span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded"> PHASE ONE </span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Tell Us About Your Business </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Share your business goals, target audience, services, and current operational requirements through our simple brief. </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary"> OUTPUT: INTAKE BRIEF </div>
+</div><div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between motion-card process-step">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="motion-step-number inline-block font-display-hero text-3xl font-bold text-primary-container"> 02 </span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded"> PHASE TWO </span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Choose Your Package </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Select Starter, Business, Growth, or Pro with published pricing and a scope agreed before work begins. </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary"> OUTPUT: FIXED SCOPE AGREEMENT </div>
+</div><div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between motion-card process-step">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="motion-step-number inline-block font-display-hero text-3xl font-bold text-primary-container"> 03 </span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded"> PHASE THREE </span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> We Design &amp; Build Your Website </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> We craft clean layouts, mobile interfaces, conversion CTAs, and integrate growth automations according to your chosen plan. </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-secondary"> OUTPUT: INTERACTIVE STAGING </div>
+</div><div class="bg-surface-container-low border border-outline-variant rounded p-6 relative flex flex-col justify-between motion-card process-step">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="motion-step-number inline-block font-display-hero text-3xl font-bold text-primary-container"> 04 </span>
+<span class="font-label-mono text-[10px] text-secondary uppercase bg-surface-container px-2 py-0.5 rounded"> PHASE FOUR </span>
+</div>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Review &amp; Launch </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Preview staging, approve revisions, and go live on your custom domain with full technical handover and support. </p>
+</div>
+<div class="mt-6 pt-3 border-t border-outline-variant/60 font-label-mono text-[11px] text-primary-container font-semibold"> OUTPUT: LIVE ON CUSTOM DOMAIN </div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-low v2-section" id="why-aevum">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="max-w-2xl mb-14 section-heading">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+05 // CORE ADVANTAGE
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">Small studio.<br>Considered details.</h2>
+<p class="font-body-lg text-secondary text-base">
+A clear scope, responsive design and support options for the work that continues after launch.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 section-content">
+<div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all value-item">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Personalised Design </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Custom-tailored layouts engineered for your specific business archetype, not generic template clones or bloated cookie-cutter themes. </p>
+</div><div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all value-item">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Clear &amp; Honest Pricing </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Compare published package rates and agree the scope and any extras before work begins. </p>
+</div><div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all value-item">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Responsive &amp; Mobile-First </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Layouts are designed for phones, tablets and desktops, with enquiry paths available at each size. </p>
+</div><div class="bg-surface-container border border-outline-variant p-6 rounded hover:border-outline transition-all value-item">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"></path></svg>
+<h3 class="font-headline-sm text-lg font-bold uppercase text-on-surface mb-2"> Dependable Ongoing Support </h3>
+<p class="font-body-sm text-secondary text-sm leading-relaxed"> Direct human communication and monthly maintenance plans to keep your site updated, secure, and running smoothly week after week. </p>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 border-b border-outline-variant bg-surface-container-lowest v2-section" id="faq">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="text-center max-w-2xl mx-auto mb-14 section-heading">
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+06 // TRANSPARENCY &amp; DETAILS
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-3">A few things<br>worth knowing.</h2>
+<p class="font-body-md text-secondary">
+Clear, straightforward answers about our website packages, technical setup, and ongoing operations.
+</p>
+</div>
+<div class="max-w-4xl mx-auto space-y-4 section-content" role="region" aria-label="FAQ Accordion List">
+<details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" open="" id="faq-item-0">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-0">
+<span>What is included in each package?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-0" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Every tier includes domain &amp; hosting setup assistance, responsive mobile-first engineering, clean semantic markup, security best practices, and the exact deliverables listed in the package breakdown above. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-1">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-1">
+<span>Is domain registration included?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-1" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> We provide complete setup assistance and DNS configuration at no extra cost. Domain registration fees are paid directly to your chosen registrar (e.g., Cloudflare, Namecheap, GoDaddy) so you retain 100% legal ownership of your business domain. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-2">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-2">
+<span>Are hosting renewals included?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-2" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Hosting setup assistance is provided. Ongoing server subscriptions are managed on your preferred hosting account or can be handled as part of our monthly support plans for completely hands-off maintenance. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-3">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-3">
+<span>Can I upgrade my package later?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-3" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Yes. You can ask to move to Growth or Pro as your needs change. We’ll review the additional scope and price before starting. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-4">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-4">
+<span>What are the monthly support plans?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-4" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Our Care (₹999/mo), Growth (₹2,999/mo), and Automation (₹4,999/mo) plans offer total peace of mind with continuous software updates, security monitoring, regular backups, and ongoing refinements without requiring you to hire an internal webmaster. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-5">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-5">
+<span>Are CRM and WhatsApp API subscriptions included?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-5" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Setup, architectural wiring, and integration into your website are fully included in the Pro package. Any recurring external third-party API or software subscription fees (e.g. WhatsApp Business Cloud API, CRM licenses) are billed directly by their respective providers. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-6">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-6">
+<span>How long does delivery take?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-6" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> Turnaround depends on the agreed scope, content readiness and review schedule. We discuss a delivery schedule before work begins, with milestones for multi-page projects or integrations where appropriate. </div>
+</details><details class="faq-accordion-item bg-surface-container-low border border-outline-variant rounded group transition-all duration-200 hover:border-outline" id="faq-item-7">
+<summary class="p-5 cursor-pointer font-headline-sm text-base md:text-lg font-semibold text-on-surface flex items-center justify-between list-none select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" aria-controls="faq-answer-7">
+<span>Who provides website content and images?</span>
+<svg class="text-secondary group-open:rotate-180 group-open:text-primary-container transition-transform duration-200 shrink-0 ml-4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path></svg>
+</summary>
+<div id="faq-answer-7" class="px-5 pb-5 pt-2 text-secondary font-body-md text-sm border-t border-outline-variant/40 leading-relaxed"> You provide your core business details, services, contact information, and business photos. We provide professional content structure guidance, styling refinement, and high-resolution royalty-free asset curation where required. </div>
+</details>
+</div>
+</div>
+</section>
+<section class="w-full px-4 md:px-8 py-12 md:py-16 xl:py-20 bg-surface-container-low v2-section" id="contact">
+<div class="max-w-[1400px] mx-auto section-shell">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 contact-layout">
+<!-- Context Column --><div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-xs text-primary-container uppercase tracking-widest font-semibold block mb-2">
+07 // DIRECT ENQUIRY
+</span>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold uppercase text-on-surface tracking-tight mb-4">Let’s build<br>what’s next.</h2>
+<p class="font-body-lg text-secondary text-base leading-relaxed mb-8">
+Tell us about your business, current digital challenges, and target milestones. We respond with a clear proposal for your project scope.
+</p>
+<div class="space-y-4 mb-8">
+<!-- Direct Email --><div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant hover:border-outline transition-colors">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 5h18v14H3zM3 5l9 7 9-7"></path></svg>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">DIRECT EMAIL</span>
+<a class="font-body-md text-sm text-on-surface hover:text-primary-container transition-colors focus:underline font-mono" href="mailto:aevumstack@gmail.com"> aevumstack@gmail.com </a>
+</div>
+</div>
+<!-- WhatsApp Direct -->
+<div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant hover:border-outline transition-colors">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 4h18v14H8l-5 4z"></path></svg>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">WHATSAPP DIRECT ENQUIRY</span>
+<a class="font-body-md text-sm text-on-surface hover:text-primary-container transition-colors focus:underline inline-flex items-center gap-1.5" href="https://wa.me/918897202737?text=Hello%20Aevum%20Stack%2C%20I%20am%20interested%20in%20discussing%20a%20website%20project." target="_blank" rel="noopener noreferrer">
+<span>Chat via WhatsApp Direct</span>
+<span class="text-xs font-label-mono text-primary-container" aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+<!-- Response Protocol -->
+<div class="flex items-center gap-3.5 p-3.5 bg-surface-container rounded border border-outline-variant">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M12 4v8l5 3"></path></svg>
+</div>
+<div>
+<span class="block font-label-mono text-[10px] text-secondary uppercase">COMMUNICATION POLICY</span>
+<span class="font-body-md text-sm text-on-surface">Prompt review of briefs via email &amp; direct channels</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-outline-variant text-xs text-secondary leading-relaxed">
+<span class="font-label-mono text-[10px] text-on-surface uppercase block font-semibold mb-1">
+HOW TO SEND YOUR BRIEF
+</span> Submit your enquiry here, or contact us directly by email or WhatsApp. </div>
+</div>
+<!-- Form Column -->
+<div class="lg:col-span-7 bg-surface-container p-6 sm:p-8 rounded border border-outline-variant shadow-xl contact-panel">
+<form id="project-form" class="space-y-5" method="post" action="#contact" novalidate="">
+<div class="hidden" aria-hidden="true"><label for="website">Leave empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<noscript><p>Please use the direct email or WhatsApp link above to send your enquiry. This form requires JavaScript.</p></noscript>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="full-name">
+Full Name <span class="text-primary-container" aria-hidden="true">*</span>
+</label>
+<input id="full-name" maxlength="100" name="fullName" type="text" required="" aria-required="true" aria-describedby="full-name-error" autocomplete="name" placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:border-primary-container transition-colors placeholder:text-secondary">
+<span id="full-name-error" role="alert" class="form-error motion-state text-[11px] font-label-mono text-primary-container hidden mt-1 block">Please enter your name</span>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="business-name">
+Business Name <span class="text-primary-container" aria-hidden="true">*</span>
+</label>
+<input id="business-name" maxlength="160" name="businessName" type="text" required="" aria-required="true" aria-describedby="business-name-error" autocomplete="organization" placeholder="e.g. Apex Health Clinic" class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:border-primary-container transition-colors placeholder:text-secondary">
+<span id="business-name-error" role="alert" class="form-error motion-state text-[11px] font-label-mono text-primary-container hidden mt-1 block">Please enter your business name</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="contact-info">
+Email Address or Phone <span class="text-primary-container" aria-hidden="true">*</span>
+</label>
+<input id="contact-info" maxlength="254" name="contactInfo" type="text" required="" aria-required="true" aria-describedby="contact-info-error" placeholder="name@company.com or +91..." class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:border-primary-container transition-colors placeholder:text-secondary">
+<span id="contact-info-error" role="alert" class="form-error motion-state text-[11px] font-label-mono text-primary-container hidden mt-1 block">Please provide a valid email or phone number</span>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="selected-package">
+Website Package or Support Plan <span class="text-primary-container" aria-hidden="true">*</span>
+</label>
+<select id="selected-package" aria-describedby="selected-package-error" name="selectedPackage" class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:border-primary-container transition-colors">
+<option value="business">Business Package — ₹9,999</option>
+<option value="starter">Starter Package — ₹4,999</option>
+<option value="growth">Growth Package — ₹14,999</option>
+<option value="pro">Pro Package — ₹29,999</option>
+<option value="care">Monthly Support: Care — ₹999/mo</option>
+<option value="support-growth">Monthly Support: Growth — ₹2,999/mo</option>
+<option value="automation">Monthly Support: Automation — ₹4,999/mo</option>
+<option value="custom">Custom Architecture / Consultation</option>
+</select>
+<span id="selected-package-error" role="alert" class="form-error motion-state text-[11px] font-label-mono text-primary-container hidden mt-1 block"></span>
+</div>
+</div>
+<div>
+<label class="block font-label-mono text-xs uppercase text-secondary mb-1.5" for="project-description">
+Project Description <span class="text-primary-container" aria-hidden="true">*</span>
+</label>
+<textarea id="project-description" maxlength="5000" name="projectDescription" required="" aria-required="true" aria-describedby="project-description-error" rows="4" placeholder="Briefly describe your business goals, target audience, and key deliverables..." class="w-full px-3.5 py-2.5 bg-surface-container-high text-on-surface font-body-md text-sm rounded border border-outline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary focus:border-primary-container transition-colors placeholder:text-secondary"></textarea>
+<span id="project-description-error" role="alert" class="form-error motion-state text-[11px] font-label-mono text-primary-container hidden mt-1 block">Please enter a brief project description</span>
+</div>
+<button id="form-submit-btn" type="submit" disabled="" class="w-full py-3.5 px-6 bg-primary-container text-white font-label-ui text-xs font-semibold uppercase tracking-wider rounded hover:bg-inverse-primary motion-press flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+<span id="submit-btn-text">Submit enquiry</span>
+<svg id="submit-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+<path d="M4 12h15m-6-6 6 6-6 6"></path>
+</svg>
+<svg id="submit-btn-spinner" class="animate-spin h-4 w-4 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+</svg>
+</button>
+<p id="contact-announcement" class="sr-only" role="status" aria-atomic="true"></p>
+<div id="contact-success-msg" class="hidden motion-state p-4 bg-surface-container-high border border-primary-container text-white font-label-mono text-xs uppercase rounded flex items-start gap-2.5">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg>
+<div>
+<span class="font-bold block text-white">Enquiry Received</span>
+<span class="text-secondary normal-case font-body-sm text-xs mt-0.5 block">
+Thank you. We received your enquiry.
+</span>
+</div>
+</div>
+<!-- Error Alert -->
+<div id="contact-error-msg" class="hidden motion-state p-4 bg-surface-container-high border border-red-500 text-white font-label-mono text-xs rounded flex items-start gap-2.5">
+<svg class="v2-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M12 4v9m0 4v2"></path></svg>
+<div>
+<span class="font-bold uppercase text-red-200 block">Enquiry Status</span>
+<span class="text-secondary normal-case font-body-sm text-xs mt-0.5 block" id="error-detail">
+
+</span>
+</div>
+</div>
+<p class="font-body-sm text-xs text-secondary text-center pt-2">
+Direct channel: <a class="text-primary-container hover:underline font-mono font-medium" href="mailto:aevumstack@gmail.com">aevumstack@gmail.com</a>
+</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full bg-[#030303] border-t border-outline-variant site-footer"><div class="footer-signature"><img src="/src/assets/signal-wordmark-light.svg" alt="AEVUM STACK" width="570" height="128"><span>Considered design.<br>Connected systems.</span><a href="#contact" aria-label="Start a project">↗</a></div>
+<div class="max-w-[1400px] mx-auto px-4 md:px-8 py-14">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-outline-variant">
+<!-- Brand Summary --><div class="lg:col-span-5 flex flex-col justify-between gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<img src="/src/assets/signal-mark-light.svg" alt="" class="footer-emblem" width="32" height="32">
+<span class="font-headline-sm text-lg uppercase font-bold text-on-surface tracking-wider">
+AEVUM STACK
+</span>
+</div>
+<p class="font-body-md text-sm text-secondary max-w-sm leading-relaxed">
+Professional website design and digital growth systems for modern businesses. With clear scope, responsive design and ongoing support options.
+</p>
+</div>
+<div class="space-y-2">
+<div>
+<span class="font-label-mono text-[10px] text-secondary uppercase block mb-0.5">
+Direct Studio Email
+</span>
+<a class="font-label-mono text-sm text-primary-container hover:underline" href="mailto:aevumstack@gmail.com"> aevumstack@gmail.com </a>
+</div>
+<div>
+<span class="font-label-mono text-[10px] text-secondary uppercase block mb-0.5">
+WhatsApp Direct
+</span>
+<a class="font-label-mono text-xs text-primary-container hover:underline inline-flex items-center gap-1" href="https://wa.me/918897202737?text=Hello%20Aevum%20Stack%2C%20I%20am%20interested%20in%20discussing%20a%20website%20project." target="_blank" rel="noopener noreferrer">
+<span>Connect on WhatsApp</span>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<span class="font-label-mono text-xs uppercase text-on-surface font-semibold tracking-wider">
+Site Navigation
+</span>
+<nav class="flex flex-col gap-2 font-body-sm text-sm text-secondary" aria-label="Footer Navigation">
+<a class="hover:text-white transition-colors" href="#top"> Home </a><a class="hover:text-white transition-colors" href="#services"> Services </a><a class="hover:text-white transition-colors" href="#packages"> Website Packages </a><a class="hover:text-white transition-colors" href="#support-plans"> Monthly Support Plans </a><a class="hover:text-white transition-colors" href="#how-it-works"> How It Works </a><a class="hover:text-white transition-colors" href="#faq"> Frequently Asked Questions </a><a class="hover:text-white transition-colors" href="#contact"> Contact &amp; Enquiry </a>
+</nav>
+</div>
+<!-- Operational Info -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-6">
+<div>
+<span class="font-label-mono text-xs uppercase text-on-surface font-semibold tracking-wider block mb-3">
+Base &amp; Operational Time
+</span>
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded border border-outline-variant text-xs font-label-mono text-on-surface mb-3">
+<span class="w-2 h-2 rounded-full bg-primary-container" aria-hidden="true"></span>
+<span>IST (UTC+5:30) • REMOTE DIGITAL STUDIO</span>
+</div>
+<p class="font-body-sm text-xs text-secondary leading-relaxed">
+Serving businesses across India and asynchronous international clients.
+</p>
+</div>
+<div>
+<span class="font-label-mono text-[10px] text-secondary uppercase block mb-1">
+OFFICIAL DOMAIN
+</span>
+<span class="font-label-mono text-xs text-on-surface">
+aevumstack.dev
+</span>
+</div>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-mono text-xs text-secondary">
+<p>© 2025 AEVUM STACK (aevumstack.dev). All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="/terms">Terms &amp; Engagement</a>
+<span class="text-outline" aria-hidden="true">/</span>
+<a class="hover:text-white transition-colors" href="/privacy">Privacy Notice</a>
+</div>
+</div>
+</div>
+</footer>  <script type="module" src="/src/main.ts"></script>
+</body></html>
